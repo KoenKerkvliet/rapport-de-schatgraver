@@ -5,6 +5,15 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.22 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.22.html`
+
+**Verbeterd (Handleiding)**
+- **De Copilot-prompt bij de rubric is verbeterd**, zodat de tekst vloeiender wordt en niet steeds met “Je leest…” of “Je gebruikt…” begint. De prompt vraagt nu om één samenhangend verhaal met een rode draad, om zinnen samen te voegen met verbindingswoorden, om afwisselende zinsbegin en andere woorden, en om twee of drie korte alinea’s.
+- Nieuwe tip: wat je kunt typen als de tekst nog niet vloeiend genoeg is.
+
+---
+
 ## Versie 1.21 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.21.html`
 

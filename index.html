@@ -705,7 +705,7 @@ button.bol:hover .voorproef{opacity:.4}
       <button type="button" class="mf-knop" id="infoKnop" aria-expanded="false" aria-controls="infoTekst" title="Vragen of opmerkingen?" aria-label="Vragen of opmerkingen?"></button>
       <div class="mf-pop" id="infoTekst" role="status" hidden>Vragen of opmerkingen? Stuur het door naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a></div>
     </div>
-    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.21</button>
+    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.22</button>
     </div>
   <div class="zoom-balk" id="zoomBalk" hidden role="group" aria-label="Inzoomen op het rapport">
     <button type="button" id="zoomMin" aria-label="Uitzoomen" title="Uitzoomen">−</button>
@@ -846,9 +846,10 @@ button.bol:hover .voorproef{opacity:.4}
 <dialog id="dlgLogboek">
   <form class="dlg" method="dialog">
     <h2>Wat is er nieuw?</h2>
-    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.21.</p>
+    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.22.</p>
     <div class="log-inhoud">
-      <details open><summary><b>Versie 1.21</b> <span>15 oktober 2026</span></summary><h4>Aangepast (Handleiding)</h4><ul><li>De voorbeeldnaam is overal <b>juf Janneke</b> (en <b>meester Jan</b> als tweede leerkracht), ook in het voorbeeld in het invulveld <i>Leerkracht</i>.</li><li>In de afbeelding bij <i>Kies je groep</i> staat het cijfertje 2 niet meer achter de lijst met groepen.</li><li>Het schema bij <i>Op school én thuis</i> (school, OneDrive, thuis) staat nu op <b>één rij</b>, zodat het duidelijker is.</li></ul></details>
+      <details open><summary><b>Versie 1.22</b> <span>15 oktober 2026</span></summary><h4>Verbeterd (Handleiding)</h4><ul><li><b>De Copilot-prompt bij de rubric is verbeterd</b>, zodat de tekst vloeiender wordt en niet steeds met “Je leest…” of “Je gebruikt…” begint. De prompt vraagt nu om één samenhangend verhaal met een rode draad, om zinnen samen te voegen met verbindingswoorden, om afwisselende zinsbegin en andere woorden, en om twee of drie korte alinea’s.</li><li>Nieuwe tip: wat je kunt typen als de tekst nog niet vloeiend genoeg is.</li></ul></details>
+      <details><summary><b>Versie 1.21</b> <span>15 oktober 2026</span></summary><h4>Aangepast (Handleiding)</h4><ul><li>De voorbeeldnaam is overal <b>juf Janneke</b> (en <b>meester Jan</b> als tweede leerkracht), ook in het voorbeeld in het invulveld <i>Leerkracht</i>.</li><li>In de afbeelding bij <i>Kies je groep</i> staat het cijfertje 2 niet meer achter de lijst met groepen.</li><li>Het schema bij <i>Op school én thuis</i> (school, OneDrive, thuis) staat nu op <b>één rij</b>, zodat het duidelijker is.</li></ul></details>
       <details><summary><b>Versie 1.20</b> <span>15 oktober 2026</span></summary><h4>Aangepast</h4><ul><li><b>De Handleiding toont nu één hoofdstuk tegelijk.</b> Links in de inhoudsopgave kies je een hoofdstuk; alleen dat hoofdstuk staat dan rechts. De onderdelen (A, B, C…) van het gekozen hoofdstuk staan onder de titel in de inhoudsopgave en springen naar de juiste plek. Onderaan elk hoofdstuk staan knoppen voor het vorige en het volgende hoofdstuk.</li></ul><h4>Nieuw in de Handleiding</h4><ul><li><b>7. Onderdelen kiezen: een eigen leerlijn voor één kind.</b> Verschil met een eigen pad, het venster openen via de drie puntjes bij een kind, alles wat je kunt aanpassen (aan/uit, plaatje, naam en zin, volgorde, onderdelen toevoegen of zelf maken), opslaan of terug naar standaard, en dezelfde keuzes gebruiken voor meerdere kinderen.</li><li><b>8. Instellingen voor de hele klas.</b> Vakken aan/uit, de drie soorten tekstvelden en de handtekeningen (hoofdschakelaar, wie tekent, de tekst boven de vakjes, twee leerkrachten, en je handtekening uploaden), met een overzichtje voor snelle keuzes.</li><li>Het laatste hoofdstuk heet nu <b>Meer hulp</b> (met het e-mailadres voor vragen en de Snelle uitleg).</li></ul></details>
       <details><summary><b>Versie 1.19</b> <span>15 oktober 2026</span></summary><p><b>Nieuw in de Handleiding</b> (drie nieuwe hoofdstukken, met afbeeldingen en genummerde aanwijzingen)</p><ul><li><b>4. Je klas opslaan en thuis verder werken.</b> Legt uit dat de tool bewust lokaal werkt (anders dan ParnasSys: geen gegevens van leerlingen op internet). Beschrijft stap voor stap hoe je school en thuis wisselt met een klasbestand (.json) in je OneDrive, wat je doet als je alleen op school werkt, wat het oranje bolletje bij <i>Klas bewaren</i> betekent, een tip om bij het downloaden zelf de map te kiezen, en een privacywaarschuwing over waar je het bestand bewaart.</li><li><b>5. Het rapport invullen.</b></li><ul><li><i>De vier scores</i> (met de plantjes) en wat ze in het kort betekenen.</li><li><i>Tekst toevoegen</i> bij een vak en bij een onderdeel.</li><li><i>Eigen pad</i> voor Rekenen, Spelling en Taal.</li><li><i>De rubric bij Technisch lezen</i>, met een <b>kant-en-klare prompt voor Copilot</b> (met een knop <i>Kopieer de prompt</i>) om de rubric-zinnen om te zetten naar een vloeiend, kindvriendelijk verhaal in de jij-vorm.</li><li><i>Afsluitende tekst</i> (“Tot slot”) onderaan het rapport.</li></ul><li><b>6. Printen, PDF en opruimen.</b> Alle opties in het hoofdmenu: <i>Klas printen</i>, <i>Leerling printen</i>, <i>Rapport printen</i> bij een kind, <i>Exporteer PDF</i> en <i>Opruimen</i> (met een overzicht welke vinkjes je voor welke situatie kiest, zoals een nieuw schooljaar).</li><li>De inhoudsopgave in de Handleiding laat nu per hoofdstuk de onderdelen zien, en de welkomstpagina heeft kaarten voor alle zes hoofdstukken.</li></ul></details>
       <details><summary><b>Versie 1.18</b> <span>15 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Hulp-icoon (vraagteken) in de bovenbalk</b>, tussen de groepkeuze en de drie puntjes. Het opent de nieuwe <b>Handleiding</b>.</li><li><b>De Handleiding</b> is een uitgebreid naslagwerk voor de leerkracht, met een inhoudsopgave links, stap-voor-stap uitleg en kleine afbeeldingen van de knoppen en schermen (met genummerde aanwijzingen). De eerste hoofdstukken:</li><ul><li><i>Welkom</i> (met privacy in het kort)</li><li><i>1. Kies je groep</i> (via de groepkeuze)</li><li><i>2. Leerlingen toevoegen</i> (via het midden van het scherm, via de zijbalk met de drie icoontjes, en via een klasbestand .json)</li><li><i>3. Rapportgegevens</i> (schooljaar, rapport 1 of 2, leerkracht(en), tweede leerkracht, inklappen)</li></ul><li>Meer hoofdstukken (invullen, eigen pad, rubric, instellingen, handtekening, printen, opruimen) volgen in volgende versies.</li></ul><h4>Aangepast</h4><ul><li>Het menu-item <b>Hulp</b> heet nu <b>Handleiding</b> en opent hetzelfde. De oude korte uitleg heet nu <b>Snelle uitleg</b> en is bereikbaar onderaan de Handleiding.</li></ul></details>
@@ -908,7 +909,7 @@ button.bol:hover .voorproef{opacity:.4}
       <li><b>Printen of PDF.</b> Open het menu rechtsboven (de drie puntjes) en kies <i>Leerling printen</i>, <i>Klas printen</i> of <i>Exporteer PDF</i>. Bij <i>Exporteer PDF</i> kies je in het printvenster <i>Opslaan als PDF</i>, en je kunt ook de hele klas in één PDF zetten. Zie je geen kleuren? Zet dan bij <i>Meer instellingen</i> het vinkje <i>Achtergrondafbeeldingen</i> aan.</li>
     </ol>
     <p class="tip">Privacy: de gegevens van de kinderen blijven op jouw computer. Er wordt niets via internet verstuurd.</p>
-    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.21</p>
+    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.22</p>
     <div class="knoppenrij"><button class="knop hoofd" value="ok">Begrepen</button></div>
   </form>
 </dialog>
@@ -2342,14 +2343,16 @@ function bouwHandleiding(){
       </section></div>
       <figcaption>Na een klik op het plusje verschijnt er een tweede veld (1). Met het prullenbakje haal je het weer weg.</figcaption></figure>`;
 
-  const PROMPT = `Herschrijf onderstaande tekst tot een kindvriendelijk, vloeiend geschreven verhaal in de jij-vorm. De tekst is bedoeld voor een basisschoolleerling en komt op het rapport te staan.
+  const PROMPT = `Herschrijf onderstaande tekst tot een kindvriendelijk, vloeiend geschreven verhaaltje in de jij-vorm. De tekst is bedoeld voor een basisschoolleerling en komt op het rapport te staan.
 
-Houd je aan deze regels:
-- De tekst staat nu in de ik-vorm. Zet hem om naar de jij-vorm en spreek het kind rechtstreeks aan ("Ik kan…" wordt "Je kunt…").
-- Gebruik korte, duidelijke zinnen en woorden die een kind van groep 5 tot en met 8 goed begrijpt.
-- Schrijf warm, positief en eerlijk. Begin met wat al goed gaat en noem wat het kind nog gaat oefenen als een volgende stap, niet als iets wat mislukt is.
+Zo pak je het aan:
+- De tekst staat nu in de ik-vorm en leest als een opsomming. Zet de inhoud om naar de jij-vorm, maar schrijf geen losse zinnen achter elkaar. Maak er één samenhangend verhaal van met een rode draad.
+- Voeg zinnen die bij elkaar horen samen tot langere, vloeiende zinnen. Gebruik daarvoor verbindingswoorden zoals "want", "omdat", "daardoor", "ook", "bovendien" en "dat zie je bijvoorbeeld aan".
+- Laat de zinnen op verschillende manieren beginnen. Begin hooguit twee zinnen na elkaar met "Je" en herhaal niet steeds hetzelfde werkwoord (zoals "lezen" of "gebruiken"). Zoek andere woorden en een andere zinsopbouw, bijvoorbeeld "Het lukt je goed om…", "Bij moeilijke woorden…", "Opvallend is dat…" of "Fijn om te zien is dat…".
+- Schrijf warm, positief en eerlijk, in twee of drie korte alinea's. Begin met wat al goed gaat en noem wat het kind nog gaat oefenen als een volgende stap, niet als iets wat mislukt is.
+- Gebruik woorden die een kind van groep 5 tot en met 8 goed begrijpt en spreek het kind rechtstreeks aan.
 - Verzin niets bij en laat niets weg: gebruik alleen wat in de tekst staat.
-- Maak er één samenhangend stuk van, dus geen opsomming, geen kopjes en geen sterretjes of andere opmaak.
+- Gebruik geen opsomming, geen kopjes en geen sterretjes of andere opmaak.
 - Geef alleen de herschreven tekst terug, zonder uitleg ervoor of erna.
 
 Tekst:
@@ -2691,6 +2694,7 @@ Tekst:
         <li>Kopieer het resultaat, klik in het tekstveld op het rapport, selecteer alles met <b>Ctrl + A</b> en plak met <b>Ctrl + V</b>.</li>
         <li><b>Lees de tekst altijd nog even na</b> en pas hem aan waar nodig. Jij blijft verantwoordelijk voor wat er op het rapport staat.</li>
       </ol>
+      <div class="hb-tip"><b>Nog niet vloeiend genoeg?</b> Typ in Copilot een vervolgvraag, bijvoorbeeld: <i>“Maak het nog vloeiender. Laat de zinnen anders beginnen en voeg ze waar het kan samen.”</i> Ook kun je vragen om de tekst korter of juist uitgebreider te maken.</div>
       <div class="hb-privacy"><b>Privacy:</b> gebruik de AI-assistent alleen op de manier die de school heeft toegestaan, en zet <b>nooit de naam van het kind</b> of andere persoonsgegevens in de prompt. De rubric-zinnen zelf bevatten geen naam; laat dat zo.</div>
 
       <h4 id="hb-invullen-slot">E. Een afsluitende tekst: “Tot slot”</h4>
