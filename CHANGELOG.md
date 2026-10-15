@@ -5,6 +5,15 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.17 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.17.html`
+
+**Nieuw**
+- **Het versienummer staat nu in de dunne footer** onderaan (links, naast het info-icoontje), bijvoorbeeld *versie 1.17*.
+- **Een klik op het versienummer opent het wijzigingslogboek**: een overzicht van alles wat er per versie is veranderd, de nieuwste bovenaan. Dit staat in het bestand zelf, dus ook zonder internet te lezen.
+
+---
+
 ## Versie 1.16 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.16.html`
 

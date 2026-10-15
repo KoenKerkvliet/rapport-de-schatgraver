@@ -1,0 +1,6 @@
+# Nooit gegevens van kinderen op GitHub zetten
+*.json
+*.csv
+*.xlsx
+*.xls
+*.pdf
