@@ -5,6 +5,23 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.23 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.23.html` (met de map `visuals` ernaast)
+
+**Nieuw**
+- **Visuals** in het hoofdmenu (de drie puntjes). Er opent een venster waarin je een visual kiest, de groep kiest en hem direct **print** of **downloadt**:
+  - *Kennismakingsformulier* en *Zelfportret*: groep 1 tot en met 8.
+  - *Zo gaat het met mij*: groep 1-2, 3-4, 5-6 en 7-8.
+  - *Tabblad Mijn schatten*: voor alle groepen (A3).
+- De groep waarin je werkt staat al klaar en je ziet meteen een voorbeeld.
+- De visuals staan als losse PDF's in de map `visuals` en worden pas opgehaald als je erop klikt. Het rapport zelf blijft daardoor even klein en snel. De PDF's zijn zonder zichtbaar kwaliteitsverlies kleiner gemaakt (samen ongeveer 8,5 MB).
+- Is een visual niet te vinden (bijvoorbeeld als het losse bestand zonder de map `visuals` wordt geopend)? Dan verschijnt een link naar de online versie.
+
+**Handleiding**
+- Hoofdstuk 6 heeft een nieuw onderdeel *C. Visuals voor het portfolio*; *Opruimen* is nu onderdeel D.
+
+---
+
 ## Versie 1.22 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.22.html`
 

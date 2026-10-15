@@ -4,3 +4,6 @@
 *.xlsx
 *.xls
 *.pdf
+
+# De lege visuals (geen kindgegevens) mogen wel online
+!visuals/*.pdf

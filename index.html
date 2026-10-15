@@ -322,6 +322,32 @@ button,input,textarea{font:inherit;color:inherit}
 .hb-stroom .hb-doos{flex:1 1 0;min-width:0;max-width:170px;padding:10px 6px;font-size:12px}
 .hb-stroom .hb-pijlen{flex:none;font-size:11.5px;gap:8px}
 @media (max-width:760px){.hb-stroom .hb-doos{font-size:11px;padding:8px 4px}.hb-stroom .hb-doos .em{font-size:22px}.hb-stroom .hb-pijlen{font-size:10px}}
+/* Visuals */
+#dlgVisuals{max-width:880px}
+#dlgVisuals .dlg{padding:0;max-height:calc(100vh - 40px);overflow:auto}
+.vis-kop{padding:22px 26px 6px}
+.vis-kop h2{margin:0}
+.vis-kop p{margin:4px 0 0;color:var(--ui-zacht);font-size:14px}
+.vis-body{display:grid;grid-template-columns:300px 1fr;gap:18px;padding:12px 26px 4px}
+.vis-lijst{display:flex;flex-direction:column;gap:8px}
+.vis-item{display:flex;gap:12px;align-items:center;text-align:left;border:1.5px solid var(--ui-lijn);background:#fff;border-radius:14px;padding:8px 10px;cursor:pointer;width:100%}
+.vis-item:hover{border-color:#f1b5d4}
+.vis-item:focus-visible{outline:3px solid #7fb6f0;outline-offset:2px}
+.vis-item[aria-checked=true]{border-color:var(--ui-roze);background:#fdf0f7}
+.vis-item img{width:46px;height:64px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--ui-lijn);background:#f6f7fb;flex:none}
+.vis-item b{display:block;font-size:14.5px}
+.vis-item small{display:block;color:var(--ui-zacht);font-size:12.5px;line-height:1.35;margin-top:2px}
+.vis-detail{display:flex;flex-direction:column;align-items:center;gap:12px;background:#f6f7fb;border:1px solid var(--ui-lijn);border-radius:16px;padding:18px 16px}
+.vis-groot{width:100%;max-width:280px;aspect-ratio:210/297;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 6px 20px rgba(30,25,60,.15)}
+.vis-groot.mist,.vis-item img.mist{visibility:hidden}
+.vis-keuze{display:flex;align-items:center;gap:10px;font-weight:700;margin:0}
+.vis-keuze[hidden]{display:none}
+.vis-keuze select{padding:7px 10px;border:1px solid var(--ui-lijn);border-radius:10px;font-weight:700;background:#fff;cursor:pointer}
+.vis-info{font-size:12.5px;color:var(--ui-zacht);margin:0;text-align:center;max-width:380px}
+.vis-melding{font-size:13px;line-height:1.45;background:#fff7ee;border:1px solid #f3cf9f;border-radius:10px;padding:8px 12px;margin:0;max-width:380px}
+.vis-melding a{color:var(--ui-roze);font-weight:700;overflow-wrap:anywhere}
+.vis-voet{display:flex;justify-content:flex-end;padding:14px 26px 20px}
+@media (max-width:720px){.vis-body{grid-template-columns:1fr}}
 .mf-info{position:relative}
 .mf-knop{width:22px;height:22px;border:0;border-radius:50%;background:none;cursor:pointer;color:var(--ui-zacht);display:grid;place-items:center;padding:0}
 .mf-knop:hover,.mf-knop[aria-expanded=true]{background:#f0f1f7;color:var(--ui-inkt)}
@@ -660,6 +686,7 @@ button.bol:hover .voorproef{opacity:.4}
         <button type="button" role="menuitem" data-menu="klasPrinten"></button>
         <button type="button" role="menuitem" data-menu="leerlingPrinten"></button>
         <button type="button" role="menuitem" data-menu="pdf"></button>
+        <button type="button" role="menuitem" data-menu="visuals"></button>
         <button type="button" role="menuitem" data-menu="opruimen"></button>
         <div class="menu-lijn" role="separator"></div>
         <button type="button" role="menuitem" data-menu="hulp"></button>
@@ -705,7 +732,7 @@ button.bol:hover .voorproef{opacity:.4}
       <button type="button" class="mf-knop" id="infoKnop" aria-expanded="false" aria-controls="infoTekst" title="Vragen of opmerkingen?" aria-label="Vragen of opmerkingen?"></button>
       <div class="mf-pop" id="infoTekst" role="status" hidden>Vragen of opmerkingen? Stuur het door naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a></div>
     </div>
-    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.22</button>
+    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.23</button>
     </div>
   <div class="zoom-balk" id="zoomBalk" hidden role="group" aria-label="Inzoomen op het rapport">
     <button type="button" id="zoomMin" aria-label="Uitzoomen" title="Uitzoomen">−</button>
@@ -833,6 +860,27 @@ button.bol:hover .voorproef{opacity:.4}
   </div>
 </dialog>
 
+<dialog id="dlgVisuals" aria-labelledby="visTitel">
+  <div class="dlg">
+    <div class="vis-kop"><h2 id="visTitel">Visuals</h2><p>Kies een visual en de groep. Daarna download of print je hem direct.</p></div>
+    <div class="vis-body">
+      <div class="vis-lijst" id="visLijst" role="radiogroup" aria-label="Kies een visual"></div>
+      <div class="vis-detail">
+        <img class="vis-groot" id="visGroot" alt="">
+        <label class="vis-keuze" id="visKeuzeRij">Groep <select id="visGroep"></select></label>
+        <p class="vis-keuze" id="visAlle" hidden>Voor alle groepen</p>
+        <p class="vis-info" id="visInfo"></p>
+        <div class="knoppenrij" style="justify-content:center;margin:0">
+          <button class="knop" type="button" id="visDownload"></button>
+          <button class="knop hoofd" type="button" id="visPrint"></button>
+        </div>
+        <p class="vis-melding" id="visMelding" role="status" hidden></p>
+      </div>
+    </div>
+    <form method="dialog" class="vis-voet"><button class="knop" value="ok">Sluiten</button></form>
+  </div>
+</dialog>
+
 <dialog id="dlgPdf">
   <div class="dlg">
     <h2>Exporteer als PDF</h2>
@@ -846,9 +894,10 @@ button.bol:hover .voorproef{opacity:.4}
 <dialog id="dlgLogboek">
   <form class="dlg" method="dialog">
     <h2>Wat is er nieuw?</h2>
-    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.22.</p>
+    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.23.</p>
     <div class="log-inhoud">
-      <details open><summary><b>Versie 1.22</b> <span>15 oktober 2026</span></summary><h4>Verbeterd (Handleiding)</h4><ul><li><b>De Copilot-prompt bij de rubric is verbeterd</b>, zodat de tekst vloeiender wordt en niet steeds met “Je leest…” of “Je gebruikt…” begint. De prompt vraagt nu om één samenhangend verhaal met een rode draad, om zinnen samen te voegen met verbindingswoorden, om afwisselende zinsbegin en andere woorden, en om twee of drie korte alinea’s.</li><li>Nieuwe tip: wat je kunt typen als de tekst nog niet vloeiend genoeg is.</li></ul></details>
+      <details open><summary><b>Versie 1.23</b> <span>15 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Visuals</b> in het hoofdmenu (de drie puntjes). Er opent een venster waarin je een visual kiest, de groep kiest en hem direct <b>print</b> of <b>downloadt</b>:</li><ul><li><i>Kennismakingsformulier</i> en <i>Zelfportret</i>: groep 1 tot en met 8.</li><li><i>Zo gaat het met mij</i>: groep 1-2, 3-4, 5-6 en 7-8.</li><li><i>Tabblad Mijn schatten</i>: voor alle groepen (A3).</li></ul><li>De groep waarin je werkt staat al klaar en je ziet meteen een voorbeeld.</li><li>De visuals staan als losse PDF's in de map <code>visuals</code> en worden pas opgehaald als je erop klikt. Het rapport zelf blijft daardoor even klein en snel. De PDF's zijn zonder zichtbaar kwaliteitsverlies kleiner gemaakt (samen ongeveer 8,5 MB).</li><li>Is een visual niet te vinden (bijvoorbeeld als het losse bestand zonder de map <code>visuals</code> wordt geopend)? Dan verschijnt een link naar de online versie.</li></ul><h4>Handleiding</h4><ul><li>Hoofdstuk 6 heeft een nieuw onderdeel <i>C. Visuals voor het portfolio</i>; <i>Opruimen</i> is nu onderdeel D.</li></ul></details>
+      <details><summary><b>Versie 1.22</b> <span>15 oktober 2026</span></summary><h4>Verbeterd (Handleiding)</h4><ul><li><b>De Copilot-prompt bij de rubric is verbeterd</b>, zodat de tekst vloeiender wordt en niet steeds met “Je leest…” of “Je gebruikt…” begint. De prompt vraagt nu om één samenhangend verhaal met een rode draad, om zinnen samen te voegen met verbindingswoorden, om afwisselende zinsbegin en andere woorden, en om twee of drie korte alinea’s.</li><li>Nieuwe tip: wat je kunt typen als de tekst nog niet vloeiend genoeg is.</li></ul></details>
       <details><summary><b>Versie 1.21</b> <span>15 oktober 2026</span></summary><h4>Aangepast (Handleiding)</h4><ul><li>De voorbeeldnaam is overal <b>juf Janneke</b> (en <b>meester Jan</b> als tweede leerkracht), ook in het voorbeeld in het invulveld <i>Leerkracht</i>.</li><li>In de afbeelding bij <i>Kies je groep</i> staat het cijfertje 2 niet meer achter de lijst met groepen.</li><li>Het schema bij <i>Op school én thuis</i> (school, OneDrive, thuis) staat nu op <b>één rij</b>, zodat het duidelijker is.</li></ul></details>
       <details><summary><b>Versie 1.20</b> <span>15 oktober 2026</span></summary><h4>Aangepast</h4><ul><li><b>De Handleiding toont nu één hoofdstuk tegelijk.</b> Links in de inhoudsopgave kies je een hoofdstuk; alleen dat hoofdstuk staat dan rechts. De onderdelen (A, B, C…) van het gekozen hoofdstuk staan onder de titel in de inhoudsopgave en springen naar de juiste plek. Onderaan elk hoofdstuk staan knoppen voor het vorige en het volgende hoofdstuk.</li></ul><h4>Nieuw in de Handleiding</h4><ul><li><b>7. Onderdelen kiezen: een eigen leerlijn voor één kind.</b> Verschil met een eigen pad, het venster openen via de drie puntjes bij een kind, alles wat je kunt aanpassen (aan/uit, plaatje, naam en zin, volgorde, onderdelen toevoegen of zelf maken), opslaan of terug naar standaard, en dezelfde keuzes gebruiken voor meerdere kinderen.</li><li><b>8. Instellingen voor de hele klas.</b> Vakken aan/uit, de drie soorten tekstvelden en de handtekeningen (hoofdschakelaar, wie tekent, de tekst boven de vakjes, twee leerkrachten, en je handtekening uploaden), met een overzichtje voor snelle keuzes.</li><li>Het laatste hoofdstuk heet nu <b>Meer hulp</b> (met het e-mailadres voor vragen en de Snelle uitleg).</li></ul></details>
       <details><summary><b>Versie 1.19</b> <span>15 oktober 2026</span></summary><p><b>Nieuw in de Handleiding</b> (drie nieuwe hoofdstukken, met afbeeldingen en genummerde aanwijzingen)</p><ul><li><b>4. Je klas opslaan en thuis verder werken.</b> Legt uit dat de tool bewust lokaal werkt (anders dan ParnasSys: geen gegevens van leerlingen op internet). Beschrijft stap voor stap hoe je school en thuis wisselt met een klasbestand (.json) in je OneDrive, wat je doet als je alleen op school werkt, wat het oranje bolletje bij <i>Klas bewaren</i> betekent, een tip om bij het downloaden zelf de map te kiezen, en een privacywaarschuwing over waar je het bestand bewaart.</li><li><b>5. Het rapport invullen.</b></li><ul><li><i>De vier scores</i> (met de plantjes) en wat ze in het kort betekenen.</li><li><i>Tekst toevoegen</i> bij een vak en bij een onderdeel.</li><li><i>Eigen pad</i> voor Rekenen, Spelling en Taal.</li><li><i>De rubric bij Technisch lezen</i>, met een <b>kant-en-klare prompt voor Copilot</b> (met een knop <i>Kopieer de prompt</i>) om de rubric-zinnen om te zetten naar een vloeiend, kindvriendelijk verhaal in de jij-vorm.</li><li><i>Afsluitende tekst</i> (“Tot slot”) onderaan het rapport.</li></ul><li><b>6. Printen, PDF en opruimen.</b> Alle opties in het hoofdmenu: <i>Klas printen</i>, <i>Leerling printen</i>, <i>Rapport printen</i> bij een kind, <i>Exporteer PDF</i> en <i>Opruimen</i> (met een overzicht welke vinkjes je voor welke situatie kiest, zoals een nieuw schooljaar).</li><li>De inhoudsopgave in de Handleiding laat nu per hoofdstuk de onderdelen zien, en de welkomstpagina heeft kaarten voor alle zes hoofdstukken.</li></ul></details>
@@ -909,7 +958,7 @@ button.bol:hover .voorproef{opacity:.4}
       <li><b>Printen of PDF.</b> Open het menu rechtsboven (de drie puntjes) en kies <i>Leerling printen</i>, <i>Klas printen</i> of <i>Exporteer PDF</i>. Bij <i>Exporteer PDF</i> kies je in het printvenster <i>Opslaan als PDF</i>, en je kunt ook de hele klas in één PDF zetten. Zie je geen kleuren? Zet dan bij <i>Meer instellingen</i> het vinkje <i>Achtergrondafbeeldingen</i> aan.</li>
     </ol>
     <p class="tip">Privacy: de gegevens van de kinderen blijven op jouw computer. Er wordt niets via internet verstuurd.</p>
-    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.22</p>
+    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.23</p>
     <div class="knoppenrij"><button class="knop hoofd" value="ok">Begrepen</button></div>
   </form>
 </dialog>
@@ -1365,6 +1414,7 @@ const UI = {
   plus: I(`<path d="M12 5v14M5 12h14"/>`),
   lijst: I(`<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1" fill="currentColor"/><circle cx="4.5" cy="12" r="1" fill="currentColor"/><circle cx="4.5" cy="18" r="1" fill="currentColor"/>`),
   pijlNeer: I(`<path d="M6 9l6 6 6-6"/>`),
+  afbeelding: I(`<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.7"/><path d="M21 15.5l-4.8-4.8L7 20"/>`),
   info: I(`<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="7.6" r=".9" fill="currentColor"/>`),
   hulp: I(`<circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.7"/><circle cx="12" cy="17" r=".6" fill="currentColor"/>`),
   prullenbak: I(`<path d="M4 7h16M9 7V4h6v3M6.5 7l1 13h9l1-13"/>`),
@@ -2255,6 +2305,110 @@ $('#opVerwijder').addEventListener('click', () => {
   $('#opSluit').addEventListener('click', () => $('#dlgOpruimen').close());
 });
 
+/* ============ Visuals ============
+   Printklare visuals voor het portfolio. Ze staan als losse PDF's in de map 'visuals' naast dit bestand
+   en worden pas opgehaald als de leerkracht erom vraagt, zodat het rapport zelf licht en snel blijft. */
+const VISUALS_MAP = 'visuals/';
+const ONLINE_ADRES = 'https://koenkerkvliet.github.io/rapport-de-schatgraver/';
+const VIS_PAREN = ['1-2', '3-4', '5-6', '7-8'];
+const VIS_ACHT = ['1', '2', '3', '4', '5', '6', '7', '8'];
+const VISUALS = [
+  { id: 'kennismaking', naam: 'Kennismakingsformulier', bestand: 'kennismakingsformulier', groepen: VIS_ACHT, formaat: 'A4',
+    uitleg: 'Het kind vertelt in de denkwolkjes over zichzelf.' },
+  { id: 'zelfportret', naam: 'Zelfportret', bestand: 'zelfportret', groepen: VIS_ACHT, formaat: 'A4',
+    uitleg: 'Een lijst waarin het kind zichzelf tekent.' },
+  { id: 'zogaat', naam: 'Zo gaat het met mij', bestand: 'zo-gaat-het-met-mij', groepen: VIS_PAREN, formaat: 'A4',
+    uitleg: 'Leerling en leerkracht kleuren in hoe het gaat.' },
+  { id: 'tabblad', naam: 'Tabblad Mijn schatten', bestand: 'tabblad-mijn-schatten', groepen: null, formaat: 'A3',
+    uitleg: 'Tabblad voor de portfoliomap, voor alle groepen.' }
+];
+let visKeuze = 'kennismaking';
+const visGroepKeuze = {};
+const visStandaardGroep = (v) => {
+  if (!v.groepen) return null;
+  const n = parseInt(CONFIG.groep, 10) || 1;
+  return v.groepen === VIS_PAREN ? VIS_PAREN[Math.min(3, Math.floor((n - 1) / 2))] : String(n);
+};
+const visGroep = (v) => (v.groepen ? (visGroepKeuze[v.id] || visStandaardGroep(v)) : null);
+const visBestand = (v, g) => v.bestand + (g ? '-groep-' + g : '');
+const visTitel = (v, g) => v.naam + (g ? ' groep ' + g : '');
+const visVoorbeeld = (v, g) => `${VISUALS_MAP}voorbeeld/${visBestand(v, g)}.jpg`;
+const visPdf = (v, g) => `${VISUALS_MAP}${visBestand(v, g)}.pdf`;
+const VIS_NIET_GEVONDEN = `Deze visual is hier niet te vinden. Open het rapport via de online versie, daar staan alle visuals klaar: <a href="${ONLINE_ADRES}" target="_blank" rel="noopener">${ONLINE_ADRES}</a>`;
+function visMelding(html){ const m = $('#visMelding'); if (html) { m.innerHTML = html; m.hidden = false; } else m.hidden = true; }
+function renderVisuals(){
+  $('#visLijst').innerHTML = VISUALS.map((v) => `<button type="button" class="vis-item" role="radio" aria-checked="${v.id === visKeuze}" data-vis="${v.id}">`
+    + `<img src="${visVoorbeeld(v, visGroep(v))}" alt="" loading="lazy"><span><b>${esc(v.naam)}</b><small>${esc(v.uitleg)}</small></span></button>`).join('');
+  const v = VISUALS.find((x) => x.id === visKeuze), g = visGroep(v);
+  const groot = $('#visGroot');
+  groot.classList.remove('mist');
+  groot.src = visVoorbeeld(v, g);
+  groot.alt = 'Voorbeeld: ' + visTitel(v, g);
+  $('#visKeuzeRij').hidden = !v.groepen;
+  $('#visAlle').hidden = !!v.groepen;
+  if (v.groepen) $('#visGroep').innerHTML = v.groepen.map((x) => `<option value="${x}"${x === g ? ' selected' : ''}>Groep ${x}</option>`).join('');
+  $('#visInfo').textContent = v.formaat === 'A3'
+    ? 'A3 · PDF. Print op A3, of kies in het printvenster “Passend maken” om hem op A4 te printen.'
+    : 'A4 · PDF';
+  document.querySelectorAll('#dlgVisuals img').forEach((img) => { img.onerror = () => img.classList.add('mist'); });
+  groot.onerror = () => { groot.classList.add('mist'); visMelding(VIS_NIET_GEVONDEN); };
+}
+function openVisuals(){
+  visMelding(null);
+  renderVisuals();
+  $('#dlgVisuals').showModal();
+}
+async function visBestaat(url){
+  if (location.protocol === 'file:') return true;          // lokaal kan dit niet gecontroleerd worden
+  try { const r = await fetch(url, { method: 'HEAD', cache: 'no-store' }); return r.ok; } catch (e) { return false; }
+}
+$('#visLijst').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-vis]');
+  if (!b) return;
+  visKeuze = b.dataset.vis; visMelding(null); renderVisuals();
+  const nu = document.querySelector(`#visLijst [data-vis="${visKeuze}"]`); if (nu) nu.focus();
+});
+$('#visLijst').addEventListener('keydown', (e) => {
+  if (!['ArrowDown', 'ArrowUp'].includes(e.key)) return;
+  e.preventDefault();
+  const i = VISUALS.findIndex((v) => v.id === visKeuze), j = (i + (e.key === 'ArrowDown' ? 1 : VISUALS.length - 1)) % VISUALS.length;
+  visKeuze = VISUALS[j].id; visMelding(null); renderVisuals();
+  document.querySelector(`#visLijst [data-vis="${visKeuze}"]`).focus();
+});
+$('#visGroep').addEventListener('change', (e) => { visGroepKeuze[visKeuze] = e.target.value; visMelding(null); renderVisuals(); });
+$('#visDownload').innerHTML = `${UI.bewaren}Downloaden`;
+$('#visPrint').innerHTML = `${UI.printer}Printen`;
+$('#visDownload').addEventListener('click', async () => {
+  const v = VISUALS.find((x) => x.id === visKeuze), g = visGroep(v), url = visPdf(v, g);
+  if (!(await visBestaat(url))) { visMelding(VIS_NIET_GEVONDEN); return; }
+  const a = document.createElement('a');
+  a.href = url; a.download = visTitel(v, g) + '.pdf';
+  document.body.appendChild(a); a.click(); a.remove();
+  visMelding(null);
+});
+$('#visPrint').addEventListener('click', async () => {
+  const v = VISUALS.find((x) => x.id === visKeuze), g = visGroep(v), url = visPdf(v, g);
+  if (!(await visBestaat(url))) { visMelding(VIS_NIET_GEVONDEN); return; }
+  if (location.protocol === 'file:') {                      // lokaal: openen in een nieuw tabblad en daar printen
+    window.open(url, '_blank', 'noopener');
+    visMelding('De visual is geopend in een nieuw tabblad. Klik daar op de printknop of druk op <b>Ctrl + P</b>.');
+    return;
+  }
+  const oud = document.getElementById('visPrintVak'); if (oud) oud.remove();
+  const f = document.createElement('iframe');
+  f.id = 'visPrintVak'; f.title = 'Printen'; f.setAttribute('aria-hidden', 'true');
+  f.style.cssText = 'position:fixed;right:0;bottom:0;width:1px;height:1px;border:0;opacity:0;pointer-events:none';
+  f.onload = () => {
+    setTimeout(() => {
+      try { f.contentWindow.focus(); f.contentWindow.print(); }
+      catch (e) { window.open(url, '_blank', 'noopener'); }
+    }, 300);
+  };
+  f.src = url;
+  document.body.appendChild(f);
+  visMelding(`Het printvenster wordt geopend. Verschijnt het niet? <a href="${url}" target="_blank" rel="noopener">Open de visual</a> en print hem daar.`);
+});
+
 /* PDF exporteren: via het printvenster van de browser (bestemming 'Opslaan als PDF'), zodat tekst scherp en kleuren kloppen */
 const bestandsnaamVan = (ll) => `Rapport groep ${CONFIG.label.replace(/\s*\/\s*/g, '-')} - ${ll ? (ll.naam.trim() || 'leerling') : 'hele klas'}`;
 function openPdfKeuze(){
@@ -2289,6 +2443,7 @@ const MENU = {
   klasPrinten:     [UI.printer, 'Klas printen'],
   leerlingPrinten: [UI.printer, 'Leerling printen'],
   pdf:             [UI.pdf, 'Exporteer PDF'],
+  visuals:         [UI.afbeelding, 'Visuals'],
   opruimen:        [UI.prullenbak, 'Opruimen'],
   hulp:            [UI.hulp, 'Handleiding']
 };
@@ -2443,7 +2598,8 @@ Tekst:
       ${nr(1, `<button type="button" tabindex="-1">${UI.printer}Klas printen</button>`, ' hb-blok')}
       ${nr(2, `<button type="button" tabindex="-1">${UI.printer}Leerling printen</button>`, ' hb-blok')}
       ${nr(3, `<button type="button" tabindex="-1">${UI.pdf}Exporteer PDF</button>`, ' hb-blok')}
-      ${nr(4, `<button type="button" tabindex="-1">${UI.prullenbak}Opruimen</button>`, ' hb-blok')}
+      ${nr(4, `<button type="button" tabindex="-1">${UI.afbeelding}Visuals</button>`, ' hb-blok')}
+      ${nr(5, `<button type="button" tabindex="-1">${UI.prullenbak}Opruimen</button>`, ' hb-blok')}
       <div class="menu-lijn"></div><button type="button" tabindex="-1">${UI.hulp}Handleiding</button></div></div>
       <figcaption>Het hoofdmenu (de drie puntjes rechtsboven).</figcaption></figure>`;
 
@@ -2517,7 +2673,7 @@ Tekst:
         <a class="hb-kaart" data-ga="gegevens"><b><span class="nr">3</span>Rapportgegevens</b><span>Schooljaar, rapport 1 of 2 en leerkracht(en).</span></a>
         <a class="hb-kaart" data-ga="opslaan"><b><span class="nr">4</span>Opslaan en thuis werken</b><span>Hoe je klas lokaal blijft en toch thuis te openen is.</span></a>
         <a class="hb-kaart" data-ga="invullen"><b><span class="nr">5</span>Het rapport invullen</b><span>Scores, teksten, eigen pad, rubric en afsluiting.</span></a>
-        <a class="hb-kaart" data-ga="afdrukken"><b><span class="nr">6</span>Printen, PDF en opruimen</b><span>Afdrukken, PDF maken en een nieuw schooljaar starten.</span></a>
+        <a class="hb-kaart" data-ga="afdrukken"><b><span class="nr">6</span>Printen, PDF en opruimen</b><span>Afdrukken, PDF maken, visuals en een nieuw schooljaar starten.</span></a>
         <a class="hb-kaart" data-ga="onderdelen"><b><span class="nr">7</span>Onderdelen kiezen</b><span>Een eigen leerlijn voor één kind samenstellen.</span></a>
         <a class="hb-kaart" data-ga="instellingen"><b><span class="nr">8</span>Instellingen</b><span>Vakken, tekstvelden en handtekeningen voor de hele klas.</span></a>
       </div>
@@ -2706,7 +2862,7 @@ Tekst:
       </ul>` },
 
     { id: 'afdrukken', nr: 6, titel: 'Printen, PDF en opruimen', html: `
-      <p class="hb-intro">Alle opties om te printen, als PDF op te slaan en op te ruimen staan in het <b>hoofdmenu</b>: de drie puntjes ${ico('puntjes', ' rond')} rechtsboven in de balk.</p>
+      <p class="hb-intro">Alle opties om te printen, als PDF op te slaan, visuals te printen en op te ruimen staan in het <b>hoofdmenu</b>: de drie puntjes ${ico('puntjes', ' rond')} rechtsboven in de balk.</p>
       ${figMenu}
 
       <h4 id="hb-afdrukken-printen">A. Printen</h4>
@@ -2734,8 +2890,31 @@ Tekst:
       </ol>
       <div class="hb-privacy">Een PDF met een rapport bevat gegevens van een kind. Bewaar en verstuur PDF’s alleen op de manier die de school daarvoor heeft afgesproken.</div>
 
-      <h4 id="hb-afdrukken-opruimen">C. Opruimen: een nieuw schooljaar beginnen</h4>
-      <p>Aan het begin van een nieuw schooljaar (of een nieuw rapport) wil je weer met een schone lei beginnen. Daarvoor is <b>Opruimen</b> ${chip(4)} in het hoofdmenu.</p>
+      <h4 id="hb-afdrukken-visuals">C. Visuals voor het portfolio</h4>
+      <p>Via <b>Visuals</b> ${chip(4)} in het hoofdmenu print of download je de lege, printklare visuals van de school. Je kiest steeds de goede versie voor jouw groep.</p>
+      <figure class="hb-fig" aria-hidden="true"><div class="hb-venster" style="max-width:640px;padding:0;overflow:hidden">
+        <div class="vis-kop"><b style="font-size:18px">Visuals</b><p>Kies een visual en de groep. Daarna download of print je hem direct.</p></div>
+        <div class="vis-body" style="padding-bottom:18px">
+          ${nr(1, `<div class="vis-lijst">${[['kennismakingsformulier-groep-5', 'Kennismakingsformulier', true], ['zelfportret-groep-5', 'Zelfportret'], ['zo-gaat-het-met-mij-groep-5-6', 'Zo gaat het met mij'], ['tabblad-mijn-schatten', 'Tabblad Mijn schatten']].map(([b, n, aan]) => `<span class="vis-item" aria-checked="${!!aan}"><img src="visuals/voorbeeld/${b}.jpg" alt="" loading="lazy"><span><b>${n}</b></span></span>`).join('')}</div>`, ' hb-blok')}
+          <div class="vis-detail"><img class="vis-groot" src="visuals/voorbeeld/kennismakingsformulier-groep-5.jpg" alt="" loading="lazy" style="max-width:150px">
+            ${nr(2, '<span class="vis-keuze">Groep <select tabindex="-1"><option>Groep 5</option></select></span>')}
+            ${nr(3, `<span class="knoppenrij" style="margin:0"><span class="knop">${UI.bewaren}Downloaden</span><span class="knop hoofd">${UI.printer}Printen</span></span>`)}</div>
+        </div></div>
+        <figcaption>(1) Kies een visual. (2) Kies de groep. (3) Download of print hem.</figcaption></figure>
+      <ol class="hb-stappen">
+        <li><b>Kies een visual.</b> Er zijn vier visuals: het <i>Kennismakingsformulier</i> en het <i>Zelfportret</i> (voor groep 1 tot en met 8), <i>Zo gaat het met mij</i> (voor groep 1-2, 3-4, 5-6 en 7-8) en het <i>Tabblad Mijn schatten</i> (voor alle groepen).</li>
+        <li><b>Kies de groep.</b> De groep waarin je werkt staat al klaar. Rechts zie je meteen een voorbeeld.</li>
+        <li><b>Printen</b> opent het printvenster met de visual. <b>Downloaden</b> slaat de PDF op, bijvoorbeeld om hem bij de repro te laten printen.</li>
+      </ol>
+      <ul>
+        <li>Het <b>Tabblad Mijn schatten</b> is A3. Print hem op A3, of kies in het printvenster <i>Passend maken</i> om hem op A4 te printen.</li>
+        <li>De visuals worden pas opgehaald als je erop klikt. Het rapport blijft daardoor even snel.</li>
+        <li>De visuals zijn lege formulieren zonder gegevens van kinderen.</li>
+      </ul>
+      <div class="hb-tip">De visuals staan bij de <b>online versie</b> van het rapport klaar. Open je het rapport als los bestand op je computer, dan vindt hij ze alleen als de map <code>visuals</code> ernaast staat. Lukt het niet? Dan zie je in het venster een link naar de online versie.</div>
+
+      <h4 id="hb-afdrukken-opruimen">D. Opruimen: een nieuw schooljaar beginnen</h4>
+      <p>Aan het begin van een nieuw schooljaar (of een nieuw rapport) wil je weer met een schone lei beginnen. Daarvoor is <b>Opruimen</b> ${chip(5)} in het hoofdmenu.</p>
       <ol class="hb-stappen">
         <li><b>Bewaar eerst je klas</b> met <i>Klas bewaren</i> als je de gegevens nog wilt kunnen terugvinden. Opruimen kun je niet ongedaan maken.</li>
         <li>Kies in het hoofdmenu <b>Opruimen</b>.</li>
@@ -2867,7 +3046,7 @@ Tekst:
     leerlingen: [['hb-leerlingen-midden', 'A. Via het beginscherm'], ['hb-leerlingen-zijbalk', 'B. Via de zijbalk'], ['hb-leerlingen-bestand', 'C. Een klasbestand openen']],
     opslaan: [['hb-opslaan-thuis', 'Op school én thuis'], ['hb-opslaan-school', 'Alleen op school']],
     invullen: [['hb-invullen-scores', 'A. De vier scores'], ['hb-invullen-tekst', 'B. Tekst toevoegen'], ['hb-invullen-pad', 'C. Eigen pad'], ['hb-invullen-rubric', 'D. Rubric technisch lezen'], ['hb-invullen-slot', 'E. Tot slot']],
-    afdrukken: [['hb-afdrukken-printen', 'A. Printen'], ['hb-afdrukken-pdf', 'B. Opslaan als PDF'], ['hb-afdrukken-opruimen', 'C. Opruimen']],
+    afdrukken: [['hb-afdrukken-printen', 'A. Printen'], ['hb-afdrukken-pdf', 'B. Opslaan als PDF'], ['hb-afdrukken-visuals', 'C. Visuals'], ['hb-afdrukken-opruimen', 'D. Opruimen']],
     onderdelen: [['hb-onderdelen-openen', 'A. Het venster openen'], ['hb-onderdelen-venster', 'B. Wat kun je aanpassen?'], ['hb-onderdelen-opslaan', 'C. Opslaan en terug'], ['hb-onderdelen-anderen', 'D. Meerdere kinderen']],
     instellingen: [['hb-instellingen-vakken', 'A. Vakken'], ['hb-instellingen-tekst', 'B. Tekstvelden'], ['hb-instellingen-ht', 'C. Handtekeningen']]
   };
@@ -2967,6 +3146,7 @@ $('#menuLijst').addEventListener('click', (e) => {
     case 'klasPrinten': print(klas.leerlingen); break;
     case 'leerlingPrinten': if (actief()) print([actief()]); break;
     case 'pdf': openPdfKeuze(); break;
+    case 'visuals': openVisuals(); break;
     case 'opruimen': openOpruimen(); break;
     case 'hulp': window.openHandleiding(); break;
   }
