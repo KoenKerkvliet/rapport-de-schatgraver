@@ -5,6 +5,23 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.18 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.18.html`
+
+**Nieuw**
+- **Hulp-icoon (vraagteken) in de bovenbalk**, tussen de groepkeuze en de drie puntjes. Het opent de nieuwe **Handleiding**.
+- **De Handleiding** is een uitgebreid naslagwerk voor de leerkracht, met een inhoudsopgave links, stap-voor-stap uitleg en kleine afbeeldingen van de knoppen en schermen (met genummerde aanwijzingen). De eerste hoofdstukken:
+  - *Welkom* (met privacy in het kort)
+  - *1. Kies je groep* (via de groepkeuze)
+  - *2. Leerlingen toevoegen* (via het midden van het scherm, via de zijbalk met de drie icoontjes, en via een klasbestand .json)
+  - *3. Rapportgegevens* (schooljaar, rapport 1 of 2, leerkracht(en), tweede leerkracht, inklappen)
+- Meer hoofdstukken (invullen, eigen pad, rubric, instellingen, handtekening, printen, opruimen) volgen in volgende versies.
+
+**Aangepast**
+- Het menu-item **Hulp** heet nu **Handleiding** en opent hetzelfde. De oude korte uitleg heet nu **Snelle uitleg** en is bereikbaar onderaan de Handleiding.
+
+---
+
 ## Versie 1.17 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.17.html`
 
