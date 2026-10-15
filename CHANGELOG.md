@@ -5,6 +5,16 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.21 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.21.html`
+
+**Aangepast (Handleiding)**
+- De voorbeeldnaam is overal **juf Janneke** (en **meester Jan** als tweede leerkracht), ook in het voorbeeld in het invulveld *Leerkracht*.
+- In de afbeelding bij *Kies je groep* staat het cijfertje 2 niet meer achter de lijst met groepen.
+- Het schema bij *Op school én thuis* (school, OneDrive, thuis) staat nu op **één rij**, zodat het duidelijker is.
+
+---
+
 ## Versie 1.20 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.20.html`
 
