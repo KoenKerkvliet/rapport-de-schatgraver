@@ -288,6 +288,35 @@ button,input,textarea{font:inherit;color:inherit}
 @media (max-width:760px){.hb-nav{flex-wrap:nowrap;overflow-x:auto}.hb-nav a{white-space:nowrap;flex:none}}
 .hb-rb>div:empty{display:none}
 
+.hb-tekst::after{display:none}
+.hb-tekst section[hidden]{display:none}
+.hb-nav a[hidden]{display:none}
+.hb-nav a.sub.actief{background:#fdf0f7;color:#a02a73}
+.hb-voet{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:34px;padding-top:18px;border-top:1px solid var(--ui-lijn)}
+.hb-voet a{text-decoration:none;color:inherit;max-width:100%;white-space:normal;text-align:left;line-height:1.3}
+.hb-voet a.hoofd{color:#fff;margin-left:auto}
+.hb-ins h5{margin:12px 0 4px;font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ui-zacht)}
+.hb-ins .schakel{font-size:13.5px}
+.hb-ins .ins-sig{margin:2px 0 4px 28px}
+.hb-fig .ap-rij>.hb-w{min-width:0}
+.hb-fig .ap-rij>.hb-w>*{flex:1;min-width:0}
+.hb-fig .ap-icoon>.hb-w{flex:none}
+.hb-fig .ap-teksten .hb-w.hb-blok{display:grid}
+.hb-fig .ap-knoppen>.hb-w{flex:none}
+.hb-fig .ap-kop{padding:16px 20px 10px}
+.hb-fig .ap-lijf{padding:2px 20px 14px;overflow:visible}
+.hb-fig .ap-voet{padding:10px 20px;flex-wrap:wrap}
+.hb-fig .ap-vak h3{font-size:15px}
+.hb-fig .ap-rij input[data-ap]{width:100%}
+.hb-htrij{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.hb-ht{position:relative;flex:1 1 150px;max-width:210px;min-height:92px;background:#fff;border:1.5px solid #cfd3e3;border-radius:12px;padding:8px 12px 8px;display:flex;flex-direction:column}
+.hb-ht .l{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--ui-zacht)}
+.hb-ht .lijn{margin-top:auto;border-bottom:1.5px solid #8a8fa8}
+.hb-ht .n{font-size:12.5px;text-align:center;padding-top:3px;min-height:20px}
+.hb-fig .ap-rij>.hb-w>.hb-nr{left:-14px;top:-14px}
+.hb-fig .ap-teller .hb-w{padding-left:26px}
+.hb-fig .ap-teller .hb-nr{left:0;top:-1px}
+
 .mf-info{position:relative}
 .mf-knop{width:22px;height:22px;border:0;border-radius:50%;background:none;cursor:pointer;color:var(--ui-zacht);display:grid;place-items:center;padding:0}
 .mf-knop:hover,.mf-knop[aria-expanded=true]{background:#f0f1f7;color:var(--ui-inkt)}
@@ -671,7 +700,7 @@ button.bol:hover .voorproef{opacity:.4}
       <button type="button" class="mf-knop" id="infoKnop" aria-expanded="false" aria-controls="infoTekst" title="Vragen of opmerkingen?" aria-label="Vragen of opmerkingen?"></button>
       <div class="mf-pop" id="infoTekst" role="status" hidden>Vragen of opmerkingen? Stuur het door naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a></div>
     </div>
-    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.19</button>
+    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.20</button>
     </div>
   <div class="zoom-balk" id="zoomBalk" hidden role="group" aria-label="Inzoomen op het rapport">
     <button type="button" id="zoomMin" aria-label="Uitzoomen" title="Uitzoomen">−</button>
@@ -812,9 +841,10 @@ button.bol:hover .voorproef{opacity:.4}
 <dialog id="dlgLogboek">
   <form class="dlg" method="dialog">
     <h2>Wat is er nieuw?</h2>
-    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.19.</p>
+    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.20.</p>
     <div class="log-inhoud">
-      <details open><summary><b>Versie 1.19</b> <span>15 oktober 2026</span></summary><p><b>Nieuw in de Handleiding</b> (drie nieuwe hoofdstukken, met afbeeldingen en genummerde aanwijzingen)</p><ul><li><b>4. Je klas opslaan en thuis verder werken.</b> Legt uit dat de tool bewust lokaal werkt (anders dan ParnasSys: geen gegevens van leerlingen op internet). Beschrijft stap voor stap hoe je school en thuis wisselt met een klasbestand (.json) in je OneDrive, wat je doet als je alleen op school werkt, wat het oranje bolletje bij <i>Klas bewaren</i> betekent, een tip om bij het downloaden zelf de map te kiezen, en een privacywaarschuwing over waar je het bestand bewaart.</li><li><b>5. Het rapport invullen.</b></li><ul><li><i>De vier scores</i> (met de plantjes) en wat ze in het kort betekenen.</li><li><i>Tekst toevoegen</i> bij een vak en bij een onderdeel.</li><li><i>Eigen pad</i> voor Rekenen, Spelling en Taal.</li><li><i>De rubric bij Technisch lezen</i>, met een <b>kant-en-klare prompt voor Copilot</b> (met een knop <i>Kopieer de prompt</i>) om de rubric-zinnen om te zetten naar een vloeiend, kindvriendelijk verhaal in de jij-vorm.</li><li><i>Afsluitende tekst</i> (“Tot slot”) onderaan het rapport.</li></ul><li><b>6. Printen, PDF en opruimen.</b> Alle opties in het hoofdmenu: <i>Klas printen</i>, <i>Leerling printen</i>, <i>Rapport printen</i> bij een kind, <i>Exporteer PDF</i> en <i>Opruimen</i> (met een overzicht welke vinkjes je voor welke situatie kiest, zoals een nieuw schooljaar).</li><li>De inhoudsopgave in de Handleiding laat nu per hoofdstuk de onderdelen zien, en de welkomstpagina heeft kaarten voor alle zes hoofdstukken.</li></ul></details>
+      <details open><summary><b>Versie 1.20</b> <span>15 oktober 2026</span></summary><h4>Aangepast</h4><ul><li><b>De Handleiding toont nu één hoofdstuk tegelijk.</b> Links in de inhoudsopgave kies je een hoofdstuk; alleen dat hoofdstuk staat dan rechts. De onderdelen (A, B, C…) van het gekozen hoofdstuk staan onder de titel in de inhoudsopgave en springen naar de juiste plek. Onderaan elk hoofdstuk staan knoppen voor het vorige en het volgende hoofdstuk.</li></ul><h4>Nieuw in de Handleiding</h4><ul><li><b>7. Onderdelen kiezen: een eigen leerlijn voor één kind.</b> Verschil met een eigen pad, het venster openen via de drie puntjes bij een kind, alles wat je kunt aanpassen (aan/uit, plaatje, naam en zin, volgorde, onderdelen toevoegen of zelf maken), opslaan of terug naar standaard, en dezelfde keuzes gebruiken voor meerdere kinderen.</li><li><b>8. Instellingen voor de hele klas.</b> Vakken aan/uit, de drie soorten tekstvelden en de handtekeningen (hoofdschakelaar, wie tekent, de tekst boven de vakjes, twee leerkrachten, en je handtekening uploaden), met een overzichtje voor snelle keuzes.</li><li>Het laatste hoofdstuk heet nu <b>Meer hulp</b> (met het e-mailadres voor vragen en de Snelle uitleg).</li></ul></details>
+      <details><summary><b>Versie 1.19</b> <span>15 oktober 2026</span></summary><p><b>Nieuw in de Handleiding</b> (drie nieuwe hoofdstukken, met afbeeldingen en genummerde aanwijzingen)</p><ul><li><b>4. Je klas opslaan en thuis verder werken.</b> Legt uit dat de tool bewust lokaal werkt (anders dan ParnasSys: geen gegevens van leerlingen op internet). Beschrijft stap voor stap hoe je school en thuis wisselt met een klasbestand (.json) in je OneDrive, wat je doet als je alleen op school werkt, wat het oranje bolletje bij <i>Klas bewaren</i> betekent, een tip om bij het downloaden zelf de map te kiezen, en een privacywaarschuwing over waar je het bestand bewaart.</li><li><b>5. Het rapport invullen.</b></li><ul><li><i>De vier scores</i> (met de plantjes) en wat ze in het kort betekenen.</li><li><i>Tekst toevoegen</i> bij een vak en bij een onderdeel.</li><li><i>Eigen pad</i> voor Rekenen, Spelling en Taal.</li><li><i>De rubric bij Technisch lezen</i>, met een <b>kant-en-klare prompt voor Copilot</b> (met een knop <i>Kopieer de prompt</i>) om de rubric-zinnen om te zetten naar een vloeiend, kindvriendelijk verhaal in de jij-vorm.</li><li><i>Afsluitende tekst</i> (“Tot slot”) onderaan het rapport.</li></ul><li><b>6. Printen, PDF en opruimen.</b> Alle opties in het hoofdmenu: <i>Klas printen</i>, <i>Leerling printen</i>, <i>Rapport printen</i> bij een kind, <i>Exporteer PDF</i> en <i>Opruimen</i> (met een overzicht welke vinkjes je voor welke situatie kiest, zoals een nieuw schooljaar).</li><li>De inhoudsopgave in de Handleiding laat nu per hoofdstuk de onderdelen zien, en de welkomstpagina heeft kaarten voor alle zes hoofdstukken.</li></ul></details>
       <details><summary><b>Versie 1.18</b> <span>15 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Hulp-icoon (vraagteken) in de bovenbalk</b>, tussen de groepkeuze en de drie puntjes. Het opent de nieuwe <b>Handleiding</b>.</li><li><b>De Handleiding</b> is een uitgebreid naslagwerk voor de leerkracht, met een inhoudsopgave links, stap-voor-stap uitleg en kleine afbeeldingen van de knoppen en schermen (met genummerde aanwijzingen). De eerste hoofdstukken:</li><ul><li><i>Welkom</i> (met privacy in het kort)</li><li><i>1. Kies je groep</i> (via de groepkeuze)</li><li><i>2. Leerlingen toevoegen</i> (via het midden van het scherm, via de zijbalk met de drie icoontjes, en via een klasbestand .json)</li><li><i>3. Rapportgegevens</i> (schooljaar, rapport 1 of 2, leerkracht(en), tweede leerkracht, inklappen)</li></ul><li>Meer hoofdstukken (invullen, eigen pad, rubric, instellingen, handtekening, printen, opruimen) volgen in volgende versies.</li></ul><h4>Aangepast</h4><ul><li>Het menu-item <b>Hulp</b> heet nu <b>Handleiding</b> en opent hetzelfde. De oude korte uitleg heet nu <b>Snelle uitleg</b> en is bereikbaar onderaan de Handleiding.</li></ul></details>
       <details><summary><b>Versie 1.17</b> <span>15 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Het versienummer staat nu in de dunne footer</b> onderaan (links, naast het info-icoontje), bijvoorbeeld <i>versie 1.17</i>.</li><li><b>Een klik op het versienummer opent het wijzigingslogboek</b>: een overzicht van alles wat er per versie is veranderd, de nieuwste bovenaan. Dit staat in het bestand zelf, dus ook zonder internet te lezen.</li></ul></details>
       <details><summary><b>Versie 1.16</b> <span>15 oktober 2026</span></summary><h4>Verbeterd (privacy)</h4><ul><li><b>De lettertypen zitten nu in het bestand zelf.</b> De tool maakt daardoor geen enkele verbinding meer met internet (eerder werden de lettertypen bij Google opgehaald, waarbij het IP-adres van de computer meeging). Het rapport ziet er hetzelfde uit.</li></ul></details>
@@ -872,7 +902,7 @@ button.bol:hover .voorproef{opacity:.4}
       <li><b>Printen of PDF.</b> Open het menu rechtsboven (de drie puntjes) en kies <i>Leerling printen</i>, <i>Klas printen</i> of <i>Exporteer PDF</i>. Bij <i>Exporteer PDF</i> kies je in het printvenster <i>Opslaan als PDF</i>, en je kunt ook de hele klas in één PDF zetten. Zie je geen kleuren? Zet dan bij <i>Meer instellingen</i> het vinkje <i>Achtergrondafbeeldingen</i> aan.</li>
     </ol>
     <p class="tip">Privacy: de gegevens van de kinderen blijven op jouw computer. Er wordt niets via internet verstuurd.</p>
-    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.19</p>
+    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.20</p>
     <div class="knoppenrij"><button class="knop hoofd" value="ok">Begrepen</button></div>
   </form>
 </dialog>
@@ -2414,6 +2444,61 @@ Tekst:
       <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px"><span class="knop">Annuleren</span><span class="knop hoofd">Doorgaan</span></div></div>
       <figcaption>Kies of je alleen dit kind of de hele klas in één PDF wilt.</figcaption></figure>`;
 
+  const figOnderdelenMenu = `<figure class="hb-fig" aria-hidden="true"><div class="hb-menu-fig">
+      <div class="zijbalk" style="width:290px;padding:12px;border:1px solid var(--ui-lijn);border-radius:14px"><div class="leerlingen"><div class="leerling-rij actief"><button type="button" class="leerling actief" tabindex="-1"><span class="nr">1</span><span class="nm">Anna de Vries</span><span class="eigen">${ICOON.wegwijzer}</span><span class="vg">3/12</span></button>${nr(1, `<button type="button" class="puntjes" tabindex="-1">${UI.puntjes}</button>`)}</div></div></div>
+      <div class="menu">
+        ${nr(2, `<button type="button" tabindex="-1">${UI.schuifjes}Onderdelen kiezen<span class="label">aangepast</span></button>`, ' hb-blok')}
+        <button type="button" tabindex="-1">${UI.printer}Rapport printen</button>
+        <div class="menu-lijn"></div><button type="button" class="gevaar" tabindex="-1">${UI.prullenbak}Verwijderen</button>
+      </div></div>
+      <figcaption>(1) De drie puntjes achter de naam van het kind. (2) Kies “Onderdelen kiezen”. Het woordje “aangepast” en het wegwijzertje achter de naam laten zien dat dit kind een eigen leerlijn heeft.</figcaption></figure>`;
+
+  const figAanpassen = `<figure class="hb-fig" aria-hidden="true"><div class="hb-venster" style="max-width:640px;padding:0;overflow:hidden">
+      <div class="ap-kop"><b style="font-size:18px">Onderdelen kiezen voor Anna de Vries</b><p>Vink aan wat op het rapport komt. Je kunt teksten aanpassen, de volgorde veranderen en onderdelen uit andere groepen toevoegen. Dit geldt alleen voor dit kind.</p></div>
+      <div class="ap-lijf"><section class="ap-vak" style="${kleurStijl({ kleur: '#e795c4', donker: '#d1418f', licht: '#fbe1ef', inkt: '#4b2340' })}">
+        <h3><span class="ap-badge">${ICOON.rekenmachine}</span>Rekenen</h3>
+        <div class="ap-rij"><span class="hb-w">${nr(1, '<label class="ap-aan"><input type="checkbox" checked tabindex="-1"></label>')}</span>
+          <div class="ap-icoon">${nr(2, `<span class="ap-voorbeeld">${ICOON.getallen}</span>`)}<select tabindex="-1"><option>Getallen</option></select></div>
+          <div class="ap-teksten">${nr(3, '<input readonly tabindex="-1" data-ap="naam" value="Getallen &amp; bewerkingen">', ' hb-blok')}<input readonly tabindex="-1" data-ap="zin" value="Ik reken met grote getallen en kommagetallen."></div>
+          <div class="ap-knoppen">${nr(4, `<button type="button" class="ikoonknop" tabindex="-1" disabled>${UI.op}</button>`)}<button type="button" class="ikoonknop" tabindex="-1">${UI.neer}</button><button type="button" class="ikoonknop" tabindex="-1" disabled>${UI.kruis}</button></div></div>
+        <div class="ap-rij uit"><label class="ap-aan"><input type="checkbox" tabindex="-1"></label>
+          <div class="ap-icoon"><span class="ap-voorbeeld">${ICOON.taart}</span><select tabindex="-1"><option>Taart</option></select></div>
+          <div class="ap-teksten"><input readonly tabindex="-1" data-ap="naam" value="Breuken, procenten &amp; verhoudingen"><input readonly tabindex="-1" data-ap="zin" value="Ik werk met breuken, procenten en verhoudingen."></div>
+          <div class="ap-knoppen"><button type="button" class="ikoonknop" tabindex="-1">${UI.op}</button><button type="button" class="ikoonknop" tabindex="-1">${UI.neer}</button><button type="button" class="ikoonknop" tabindex="-1" disabled>${UI.kruis}</button></div></div>
+        <div class="ap-rij"><label class="ap-aan"><input type="checkbox" checked tabindex="-1"></label>
+          <div class="ap-icoon"><span class="ap-voorbeeld">${ICOON.ster}</span><select tabindex="-1"><option>Ster</option></select></div>
+          <div class="ap-teksten"><input readonly tabindex="-1" data-ap="naam" value="Hoofdrekenen op eigen niveau"><input readonly tabindex="-1" data-ap="zin" value="Ik oefen met sommen die bij mij passen."><span class="ap-bron">Eigen onderdeel</span></div>
+          <div class="ap-knoppen"><button type="button" class="ikoonknop" tabindex="-1">${UI.op}</button><button type="button" class="ikoonknop" tabindex="-1" disabled>${UI.neer}</button><button type="button" class="ikoonknop" tabindex="-1">${UI.kruis}</button></div></div>
+        <div class="ap-toevoegen">${nr(5, '<select tabindex="-1"><option>+ Onderdeel toevoegen…</option></select>')}</div>
+      </section></div>
+      <div class="ap-voet"><span class="ap-teller">${nr(6, '2 onderdelen op het rapport')}</span><span class="knop klein">Terug naar standaard</span><span class="knop">Annuleren</span><span class="knop hoofd">Opslaan</span></div>
+      </div><figcaption>Het venster “Onderdelen kiezen”, hier voor Rekenen. (1) aan of uit, (2) plaatje, (3) naam en zin, (4) volgorde en verwijderen, (5) toevoegen, (6) hoeveel onderdelen er op het rapport komen.</figcaption></figure>`;
+
+  const figInsVakken = `<figure class="hb-fig" aria-hidden="true"><div class="hb-venster hb-ins" style="max-width:480px">
+      <b>Instellingen voor het rapport</b><p>Deze instellingen gelden voor alle kinderen in je klas.</p>
+      ${nr(1, `<div><h5>Vakken op het rapport</h5>
+        ${['rekenmachine', 'potlood', 'boek'].map((ic, i) => `<label class="schakel" style="padding:4px 0;align-items:center"><input type="checkbox" tabindex="-1"${i === 2 ? '' : ' checked'}><span style="display:flex;align-items:center;gap:8px"><span style="width:22px;height:22px;border-radius:50%;background:${['#d1418f', '#3d8bcc', '#76a82a'][i]};color:#fff;display:grid;place-items:center"><span style="width:13px;height:13px;display:block">${ICOON[ic]}</span></span>${['Rekenen', 'Spelling', 'Taal'][i]}</span></label>`).join('')}</div>`, ' hb-blok')}
+      ${nr(2, `<div><h5>Tekstvelden</h5>
+        <label class="schakel"><input type="checkbox" checked tabindex="-1"><span><b>Tekstveld bij elk vak</b><small>Een algemene opmerking bij Rekenen, Spelling en Taal.</small></span></label>
+        <label class="schakel"><input type="checkbox" checked tabindex="-1"><span><b>Tekstveld bij elk onderdeel</b><small>Ruimte om onder een onderdeel iets extra’s te schrijven.</small></span></label>
+        <label class="schakel"><input type="checkbox" checked tabindex="-1"><span><b>Afsluitende tekst onderaan</b><small>Een tekst aan het einde van het rapport.</small></span></label></div>`, ' hb-blok')}
+      </div><figcaption>(1) Vakken aan of uit voor de hele klas. (2) De drie soorten tekstvelden.</figcaption></figure>`;
+
+  const figInsHandtekening = `<figure class="hb-fig" aria-hidden="true"><div class="hb-venster hb-ins" style="max-width:480px">
+      ${nr(1, `<div><h5>Handtekeningen</h5><label class="schakel"><input type="checkbox" checked tabindex="-1"><span><b>Handtekeningvakjes onderaan het rapport</b><small>Kies wie er tekent en pas de namen onder de vakjes aan.</small></span></label></div>`, ' hb-blok')}
+      <div style="padding-left:28px;display:grid;gap:8px;margin-top:6px">
+        ${nr(2, `<div style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked tabindex="-1"><input value="Leerkracht" readonly tabindex="-1" style="padding:6px 9px;border:1px solid var(--ui-lijn);border-radius:8px;flex:1"></div>`, ' hb-blok')}
+        ${nr(3, `<label class="schakel" style="padding:0"><input type="checkbox" tabindex="-1"><span>Twee leerkrachten tekenen<small>Het vakje wordt hoger met twee lijnen. De naam van de tweede leerkracht vul je links in bij Rapportgegevens.</small></span></label>`, ' hb-blok')}
+        ${nr(4, `<div class="ins-sig"><b>Handtekening van de leerkracht</b><small>Liefst een PNG met doorzichtige achtergrond. Een foto of scan op wit papier mag ook; de lichte achtergrond wordt dan vanzelf weggehaald.</small>
+          <div class="ins-sig-rij"><span class="naamlabel">juf Linda</span><span class="ins-sig-prev"><span>nog geen</span></span><span class="knop klein">${UI.bewaren.replace('<svg', '<svg style="transform:rotate(180deg)"')}Uploaden</span></div></div>`, ' hb-blok')}
+        <div style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked tabindex="-1"><input value="Ouder(s) / verzorger(s)" readonly tabindex="-1" style="padding:6px 9px;border:1px solid var(--ui-lijn);border-radius:8px;flex:1"></div>
+        <div style="display:flex;gap:8px;align-items:center"><input type="checkbox" checked tabindex="-1"><input value="Leerling" readonly tabindex="-1" style="padding:6px 9px;border:1px solid var(--ui-lijn);border-radius:8px;flex:1"></div>
+      </div></div><figcaption>(1) De hoofdschakelaar. (2) Per vakje aan of uit, en de tekst boven het vakje. (3) Twee leerkrachten. (4) De handtekening uploaden.</figcaption></figure>`;
+
+  const figHandtekeningVakjes = `<figure class="hb-fig" aria-hidden="true"><div class="hb-htrij">
+      ${[['Leerkracht', 'juf Linda'], ['Ouder(s) / verzorger(s)', ''], ['Leerling', 'Anna de Vries']].map(([l, n]) => `<div class="hb-ht"><span class="l">${l}</span><span class="lijn"></span><span class="n">${n || '&nbsp;'}</span></div>`).join('')}
+    </div><figcaption>Onderaan het rapport: de handtekeningvakjes. De naam van de leerkracht komt uit Rapportgegevens, de naam van de leerling is de naam van het kind. Het vakje van de ouder blijft leeg.</figcaption></figure>`;
+
   const hoofdstukken = [
     { id: 'welkom', titel: 'Welkom', html: `
       <p class="hb-intro">In deze handleiding loop je stap voor stap alle onderdelen van het rapport langs. Opent de tool voor het eerst? Dan is alles nog leeg. Dat hoort zo: je begint zelf met de groep, de leerlingen en de gegevens van het rapport.</p>
@@ -2421,9 +2506,11 @@ Tekst:
         <a class="hb-kaart" data-ga="groep"><b><span class="nr">1</span>Kies je groep</b><span>Als eerste stel je de juiste groep in.</span></a>
         <a class="hb-kaart" data-ga="leerlingen"><b><span class="nr">2</span>Leerlingen toevoegen</b><span>Eén voor één, een namenlijst of een klasbestand.</span></a>
         <a class="hb-kaart" data-ga="gegevens"><b><span class="nr">3</span>Rapportgegevens</b><span>Schooljaar, rapport 1 of 2 en leerkracht(en).</span></a>
-        <a class="hb-kaart" data-ga="opslaan"><b><span class="nr">4</span>Opslaan en thuis werken</b><span>Hoe je klas veilig lokaal blijft en toch thuis te openen is.</span></a>
+        <a class="hb-kaart" data-ga="opslaan"><b><span class="nr">4</span>Opslaan en thuis werken</b><span>Hoe je klas lokaal blijft en toch thuis te openen is.</span></a>
         <a class="hb-kaart" data-ga="invullen"><b><span class="nr">5</span>Het rapport invullen</b><span>Scores, teksten, eigen pad, rubric en afsluiting.</span></a>
         <a class="hb-kaart" data-ga="afdrukken"><b><span class="nr">6</span>Printen, PDF en opruimen</b><span>Afdrukken, PDF maken en een nieuw schooljaar starten.</span></a>
+        <a class="hb-kaart" data-ga="onderdelen"><b><span class="nr">7</span>Onderdelen kiezen</b><span>Een eigen leerlijn voor één kind samenstellen.</span></a>
+        <a class="hb-kaart" data-ga="instellingen"><b><span class="nr">8</span>Instellingen</b><span>Vakken, tekstvelden en handtekeningen voor de hele klas.</span></a>
       </div>
       <div class="hb-privacy"><b>Privacy:</b> alles wat je invult blijft in de browser op dit apparaat. Er wordt niets via internet verstuurd. Alles wordt vanzelf bewaard.</div>
       <p>Deze handleiding open je altijd weer met het vraagtekenknopje ${ico('hulp', ' rond')} rechtsboven in de balk, naast de drie puntjes ${ico('puntjes', ' rond')}.</p>` },
@@ -2656,8 +2743,113 @@ Tekst:
       </table>
       <div class="hb-let-op"><b>Let op:</b> Opruimen geldt alleen voor de groep die je nu hebt gekozen en wist alleen wat in de browser staat. Een klasbestand dat je eerder in OneDrive hebt bewaard blijft staan. Verwijder oude klasbestanden zelf wanneer je ze niet meer nodig hebt.</div>` },
 
-    { id: 'meer', titel: 'Meer onderwerpen', html: `
-      <p>Deze handleiding wordt nog uitgebreid, onder andere met <b>Onderdelen kiezen</b> (een eigen leerlijn per kind) en alle <b>Instellingen</b> (vakken, handtekeningen). Wil je in de tussentijd een kort overzicht van alles? Dat staat in de snelle uitleg.</p>
+    { id: 'onderdelen', nr: 7, titel: 'Onderdelen kiezen: een eigen leerlijn voor één kind', html: `
+      <p class="hb-intro">Standaard krijgt elk kind de onderdelen van de groep. Heeft een kind andere leerdoelen dan de rest? Dan pas je <b>voor dat kind</b> de onderdelen aan. Je kunt onderdelen aan- of uitzetten, de tekst veranderen, de volgorde wijzigen en onderdelen uit andere groepen of helemaal zelf bedachte onderdelen toevoegen.</p>
+
+      <h4>Eigen leerlijn of eigen pad: wat is het verschil?</h4>
+      <table class="hb-keuzes">
+        <tr><th></th><th>Onderdelen kiezen</th><th>Eigen pad</th></tr>
+        <tr><td><b>Wat verandert er?</b></td><td>Het kind krijgt <b>andere onderdelen</b> met bolletjes.</td><td>De bolletjes van een vak worden vervangen door een <b>eigen bladzijde</b> met doelen in woorden.</td></tr>
+        <tr><td><b>Voor welke vakken?</b></td><td>Alle vakken.</td><td>Rekenen, Spelling en Taal.</td></tr>
+        <tr><td><b>Zie hoofdstuk</b></td><td>Dit hoofdstuk.</td><td>5. Het rapport invullen, onderdeel C.</td></tr>
+      </table>
+      <div class="hb-tip">Wil je een vak of onderdeel voor de <b>hele klas</b> weglaten? Dat doe je niet hier, maar bij <b>Instellingen</b> (zie hoofdstuk 8).</div>
+
+      <h4 id="hb-onderdelen-openen">A. Het venster openen</h4>
+      ${figOnderdelenMenu}
+      <ol class="hb-stappen">
+        <li>Klik in de lijst links op de <b>drie puntjes</b> achter de naam van het kind.</li>
+        <li>Kies <b>Onderdelen kiezen</b>.</li>
+      </ol>
+      <p>Heeft een kind al een eigen leerlijn, dan staat er een wegwijzertje achter de naam in de lijst en het woordje <i>aangepast</i> in het menu.</p>
+
+      <h4 id="hb-onderdelen-venster">B. Wat kun je aanpassen?</h4>
+      ${figAanpassen}
+      <ol class="hb-stappen">
+        <li><b>Aan of uit.</b> Met het vinkje bepaal je of een onderdeel op het rapport komt. Een uitgezet onderdeel is grijs. Zo laat je bijvoorbeeld een onderdeel weg dat nog niet aan bod is gekomen.</li>
+        <li><b>Plaatje.</b> Kies in de lijst een ander plaatje bij het onderdeel.</li>
+        <li><b>Naam en zin.</b> Pas de naam van het onderdeel aan (maximaal 45 tekens) en de zin in de ik-vorm (maximaal 75 tekens), bijvoorbeeld <i>Ik oefen met …</i>.</li>
+        <li><b>Volgorde en verwijderen.</b> Met de pijltjes zet je een onderdeel hoger of lager. Het kruisje verwijdert een onderdeel dat je zelf hebt <b>toegevoegd</b>. Onderdelen die er standaard al staan kun je niet verwijderen, maar wel uitzetten met het vinkje.</li>
+        <li><b>Onderdeel toevoegen.</b> Onder elk vak staat <i>+ Onderdeel toevoegen…</i>. Kies een onderdeel uit de lijst (je ziet erbij uit welke groep het komt) of kies <b>Eigen onderdeel (zelf typen)</b> en bedenk zelf naam en zin. Een toegevoegd onderdeel krijgt een klein label: “Toegevoegd uit groep …” of “Eigen onderdeel”.</li>
+        <li><b>Teller.</b> Onderin zie je hoeveel onderdelen er nu op het rapport komen.</li>
+      </ol>
+
+      <h4 id="hb-onderdelen-opslaan">C. Opslaan, annuleren of terug naar standaard</h4>
+      <ul>
+        <li><b>Opslaan</b> bewaart je keuzes voor dit kind. De wijzigingen zie je meteen op het rapport.</li>
+        <li><b>Annuleren</b> sluit het venster zonder iets te veranderen.</li>
+        <li><b>Terug naar standaard</b> zet alle onderdelen weer terug naar de standaard van de groep. De tool vraagt eerst of je het zeker weet. Klik daarna nog op <b>Opslaan</b>.</li>
+      </ul>
+
+      <h4 id="hb-onderdelen-anderen">D. Dezelfde keuzes voor meerdere kinderen</h4>
+      <p>Onderaan het venster staat <b>Ook gebruiken voor andere leerlingen</b>. Klap dit open en vink de kinderen aan die dezelfde onderdelen krijgen. Zij ontvangen dan precies dezelfde leerlijn.</p>
+      <div class="hb-let-op">Eerdere aanpassingen van de kinderen die je aanvinkt worden <b>vervangen</b> door deze keuzes.</div>
+
+      <h4>Goed om te weten</h4>
+      <ul>
+        <li>Een eigen leerlijn geldt voor <b>rapport 1 én rapport 2</b>.</li>
+        <li>Staat voor een vak <b>Eigen pad</b> aan, dan staan de onderdelen van dat vak niet op het rapport. Dat zie je in het venster bij het vak staan.</li>
+        <li>Je ingevulde bolletjes en teksten blijven bewaard als je een onderdeel uitzet. Zet je het weer aan, dan staat alles er nog.</li>
+        <li>De eigen leerlijn zit in je klasbestand (<i>Klas bewaren</i>), dus je neemt hem mee naar een andere computer.</li>
+      </ul>` },
+
+    { id: 'instellingen', nr: 8, titel: 'Instellingen voor de hele klas', html: `
+      <p class="hb-intro">Bij <b>Instellingen</b> bepaal je hoe het rapport er voor <b>alle kinderen in de klas</b> uitziet: welke vakken er op staan, welke tekstvelden je gebruikt en wie er tekent. Je opent ze via het hoofdmenu ${ico('puntjes', ' rond')} rechtsboven.</p>
+      <ul>
+        <li>Alles wat je verandert wordt <b>direct</b> toegepast en bewaard. Met <b>Klaar</b> sluit je het venster.</li>
+        <li>De instellingen gelden voor de groep die je nu hebt gekozen. Elke groep heeft zijn eigen instellingen.</li>
+        <li>De instellingen zitten in je klasbestand (<i>Klas bewaren</i>).</li>
+      </ul>
+
+      <h4 id="hb-instellingen-vakken">A. Vakken op het rapport</h4>
+      ${figInsVakken}
+      <p>Onder <b>Vakken op het rapport</b> (1) staan alle vakken van de groep met een vinkje. Haal het vinkje weg en het vak verdwijnt van het rapport van <b>alle kinderen</b>, bijvoorbeeld omdat je een vak (nog) niet geeft. Wat je al had ingevuld blijft bewaard: zet je het vak weer aan, dan staat alles er nog.</p>
+      <div class="hb-tip">Gaat het om één kind? Gebruik dan <b>Onderdelen kiezen</b> (hoofdstuk 7).</div>
+
+      <h4 id="hb-instellingen-tekst">B. Tekstvelden</h4>
+      <p>Onder <b>Tekstvelden</b> (2) zet je drie soorten tekstvelden aan of uit:</p>
+      <ul>
+        <li><b>Tekstveld bij elk vak:</b> de “+ tekst” naast de naam van een vak.</li>
+        <li><b>Tekstveld bij elk onderdeel:</b> de “+ tekst” onder een onderdeel.</li>
+        <li><b>Afsluitende tekst onderaan:</b> het “Tot slot” aan het einde van het rapport.</li>
+      </ul>
+      <p>Een tekstveld dat je <b>leeg</b> laat, komt niet op het rapport. Zet je een tekstveld <b>uit</b>, dan blijft je tekst bewaard, maar hij wordt niet meer getoond of geprint. Gebruik je ze helemaal niet, dan zet je ze allemaal uit en blijft het scherm rustig.</p>
+
+      <h4 id="hb-instellingen-ht">C. Handtekeningen</h4>
+      ${figHandtekeningVakjes}
+      <p>Onderaan het rapport kunnen handtekeningvakjes staan. Dit regel je in het venster Instellingen:</p>
+      ${figInsHandtekening}
+      <ol class="hb-stappen">
+        <li><b>Hoofdschakelaar.</b> Zet <i>Handtekeningvakjes onderaan het rapport</i> aan of uit. Staat hij uit, dan komt er helemaal geen handtekeningenblok op het rapport.</li>
+        <li><b>Wie tekent?</b> Vink per vakje aan of het op het rapport komt: <i>Leerkracht</i>, <i>Ouder(s) / verzorger(s)</i> en <i>Leerling</i>. In het tekstvak ernaast kun je de tekst boven het vakje aanpassen (maximaal 30 tekens), bijvoorbeeld “Juf” in plaats van “Leerkracht”.</li>
+        <li><b>Twee leerkrachten.</b> Vink <i>Twee leerkrachten tekenen</i> aan: het vakje wordt hoger en krijgt twee lijnen. De naam van de tweede leerkracht vul je links in bij <i>Rapportgegevens</i>. Dit is dezelfde keuze als het plusje achter het veld Leerkracht, dus ze lopen gelijk.</li>
+        <li><b>Handtekening uploaden.</b> Zie hieronder.</li>
+      </ol>
+      <p>De naam van de leerkracht onder het vakje komt uit <i>Rapportgegevens</i>. Onder het vakje van de leerling staat automatisch de naam van het kind.</p>
+
+      <h4>Je handtekening uploaden</h4>
+      <p>Wil je dat je handtekening vanzelf in het vakje staat? Dan upload je hem één keer.</p>
+      <ol class="hb-stappen">
+        <li>Zet je handtekening met een <b>donkere pen op wit papier</b> en maak er een foto of scan van.</li>
+        <li>Het beste werkt een <b>PNG met een doorzichtige achtergrond</b> (bijvoorbeeld gemaakt in Canva). Lukt dat niet? Een foto of scan op wit papier mag ook: de tool haalt de lichte achtergrond zelf weg en snijdt het plaatje bij.</li>
+        <li>Klik bij <i>Handtekening van de leerkracht</i> op <b>Uploaden</b> en kies het bestand (PNG, JPG of WebP, maximaal 8 MB).</li>
+        <li>Je ziet een voorbeeld. Met <b>Vervangen</b> kies je een ander plaatje, met <b>Verwijderen</b> haal je hem weer weg.</li>
+      </ol>
+      <p>Heb je twee leerkrachten ingesteld? Dan verschijnen er twee uploadregels, één per leerkracht.</p>
+      <div class="hb-privacy">De handtekening wordt <b>alleen in je eigen browser</b> bewaard en zit in je klasbestand. Je hoeft hem dus niet opnieuw te uploaden als je het klasbestand op een andere computer opent. Bewaar het klasbestand daarom ook goed (zie hoofdstuk 4).</div>
+
+      <h4>Handig voor snelle keuzes</h4>
+      <table class="hb-keuzes">
+        <tr><th>Wat wil je?</th><th>Wat doe je?</th></tr>
+        <tr><td>Geen handtekeningvakjes op het rapport</td><td>Zet <i>Handtekeningvakjes onderaan het rapport</i> uit.</td></tr>
+        <tr><td>Alleen leerkracht en ouder laten tekenen</td><td>Vink <i>Leerling</i> uit.</td></tr>
+        <tr><td>Geen extra tekstvelden, alleen bolletjes</td><td>Zet bij <i>Tekstvelden</i> alle drie de schakelaars uit.</td></tr>
+        <tr><td>Een vak niet gebruiken voor de hele klas</td><td>Haal bij <i>Vakken op het rapport</i> het vinkje weg.</td></tr>
+      </table>` },
+
+    { id: 'meer', titel: 'Meer hulp', html: `
+      <p>Kom je er met deze handleiding niet uit, of mis je iets? Stuur een berichtje naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a>. Via het info-icoontje ${ico('info', ' rond')} onderin links vind je dit adres ook.</p>
+      <p>Wil je een kort overzicht van alle onderdelen op één plek? Dat staat in de snelle uitleg.</p>
       <p><button type="button" class="knop" id="hbSnelleUitleg">Snelle uitleg bekijken</button></p>` }
   ];
 
@@ -2665,11 +2857,17 @@ Tekst:
     leerlingen: [['hb-leerlingen-midden', 'A. Via het beginscherm'], ['hb-leerlingen-zijbalk', 'B. Via de zijbalk'], ['hb-leerlingen-bestand', 'C. Een klasbestand openen']],
     opslaan: [['hb-opslaan-thuis', 'Op school én thuis'], ['hb-opslaan-school', 'Alleen op school']],
     invullen: [['hb-invullen-scores', 'A. De vier scores'], ['hb-invullen-tekst', 'B. Tekst toevoegen'], ['hb-invullen-pad', 'C. Eigen pad'], ['hb-invullen-rubric', 'D. Rubric technisch lezen'], ['hb-invullen-slot', 'E. Tot slot']],
-    afdrukken: [['hb-afdrukken-printen', 'A. Printen'], ['hb-afdrukken-pdf', 'B. Opslaan als PDF'], ['hb-afdrukken-opruimen', 'C. Opruimen']]
+    afdrukken: [['hb-afdrukken-printen', 'A. Printen'], ['hb-afdrukken-pdf', 'B. Opslaan als PDF'], ['hb-afdrukken-opruimen', 'C. Opruimen']],
+    onderdelen: [['hb-onderdelen-openen', 'A. Het venster openen'], ['hb-onderdelen-venster', 'B. Wat kun je aanpassen?'], ['hb-onderdelen-opslaan', 'C. Opslaan en terug'], ['hb-onderdelen-anderen', 'D. Meerdere kinderen']],
+    instellingen: [['hb-instellingen-vakken', 'A. Vakken'], ['hb-instellingen-tekst', 'B. Tekstvelden'], ['hb-instellingen-ht', 'C. Handtekeningen']]
   };
-  $('#hbNav').innerHTML = hoofdstukken.map((h) => `<a data-ga="${h.id}">${h.nr ? h.nr + '. ' : ''}${h.titel.replace(' (links in het menu)', '')}</a>`
-    + (SUBS[h.id] || []).map(([id, t]) => `<a class="sub" data-ga="${id}">${t}</a>`).join('')).join('');
-  $('#hbTekst').innerHTML = hoofdstukken.map((h) => `<section id="hb-${h.id}"><h3>${h.nr ? `<span class="nr">${h.nr}</span>` : ''}${h.titel}</h3>${h.html}</section>`).join('');
+  $('#hbNav').innerHTML = hoofdstukken.map((h) => `<a data-ga="${h.id}">${h.nr ? h.nr + '. ' : ''}${h.titel.replace(' (links in het menu)', '').replace(/:.*/, '')}</a>`
+    + (SUBS[h.id] || []).map(([id, t]) => `<a class="sub" data-ga="${id}" data-hoofd="${h.id}" hidden>${t}</a>`).join('')).join('');
+  const kort = (t) => t.replace(' (links in het menu)', '').replace(/:.*/, '');
+  const hoofdNaam = (x) => `${x.nr ? x.nr + '. ' : ''}${kort(x.titel)}`;
+  $('#hbTekst').innerHTML = hoofdstukken.map((h, i) => `<section id="hb-${h.id}" hidden><h3>${h.nr ? `<span class="nr">${h.nr}</span>` : ''}${h.titel}</h3>${h.html}`
+    + `<div class="hb-voet">${i > 0 ? `<a class="knop" data-ga="${hoofdstukken[i - 1].id}">← ${hoofdNaam(hoofdstukken[i - 1])}</a>` : '<span></span>'}`
+    + `${i < hoofdstukken.length - 1 ? `<a class="knop hoofd" data-ga="${hoofdstukken[i + 1].id}">${hoofdNaam(hoofdstukken[i + 1])} →</a>` : ''}</div></section>`).join('');
 
   function kopieerTekst(tekst, knop){
     const klaar = () => { const oud = knop.textContent; knop.textContent = 'Gekopieerd ✓'; knop.classList.add('gelukt'); setTimeout(() => { knop.textContent = oud === 'Gekopieerd ✓' ? 'Kopieer de prompt' : oud; knop.classList.remove('gelukt'); }, 2200); };
@@ -2677,11 +2875,34 @@ Tekst:
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(tekst).then(klaar, noodgreep); else noodgreep();
   }
   const scrollEl = $('#hbTekst');
-  const doel = (id) => document.getElementById(id.startsWith('hb-') ? id : 'hb-' + id);
+  const secties = [...scrollEl.querySelectorAll(':scope > section')];
+  let huidig = null;
   const bovenkant = (el) => el.getBoundingClientRect().top - scrollEl.getBoundingClientRect().top + scrollEl.scrollTop;
+  function markeerSub(){
+    const subs = [...document.querySelectorAll('#hbNav a.sub:not([hidden])')];
+    let act = null;
+    for (const a of subs) { const el = document.getElementById(a.dataset.ga); if (el && bovenkant(el) - scrollEl.scrollTop <= 60) act = a; }
+    subs.forEach((a) => a.classList.toggle('actief', a === act));
+  }
+  /* Eén hoofdstuk tegelijk: de rest is verborgen. De inhoudsopgave toont de onderdelen van het getoonde hoofdstuk. */
+  function toon(id){
+    const sec = document.getElementById('hb-' + id);
+    if (!sec) return;
+    huidig = id;
+    secties.forEach((s) => { s.hidden = s !== sec; });
+    document.querySelectorAll('#hbNav a').forEach((a) => {
+      if (a.classList.contains('sub')) a.hidden = a.dataset.hoofd !== id;
+      else a.classList.toggle('actief', a.dataset.ga === id);
+    });
+    scrollEl.style.scrollBehavior = 'auto'; scrollEl.scrollTop = 0; scrollEl.style.scrollBehavior = '';
+    markeerSub();
+  }
   function gaNaar(id){
-    const el = doel(id);
-    if (el) scrollEl.scrollTo({ top: bovenkant(el) - 6, behavior: 'smooth' });
+    const el = document.getElementById(id.startsWith('hb-') ? id : 'hb-' + id);
+    if (!el) return;
+    const sec = el.closest('section'), hoofd = sec.id.replace(/^hb-/, '');
+    if (hoofd !== huidig) toon(hoofd);
+    if (el !== sec) scrollEl.scrollTo({ top: bovenkant(el) - 6, behavior: 'smooth' });
   }
   $('#dlgHandleiding').addEventListener('click', (e) => {
     const a = e.target.closest('[data-ga]');
@@ -2690,18 +2911,11 @@ Tekst:
     const kb = e.target.closest('#hbKopieer');
     if (kb) kopieerTekst(PROMPT, kb);
   });
-  function markeerActief(){
-    const ids = [...document.querySelectorAll('#hbNav [data-ga]')].map((a) => a.dataset.ga);
-    let huidig = ids[0];
-    for (const id of ids) { const el = doel(id); if (el && bovenkant(el) - scrollEl.scrollTop <= 60) huidig = id; }
-    document.querySelectorAll('#hbNav a').forEach((a) => a.classList.toggle('actief', a.dataset.ga === huidig));
-  }
-  scrollEl.addEventListener('scroll', markeerActief);
+  scrollEl.addEventListener('scroll', markeerSub);
   window.openHandleiding = (id) => {
     $('#dlgHandleiding').showModal();
-    scrollEl.style.scrollBehavior = 'auto'; scrollEl.scrollTop = 0; scrollEl.style.scrollBehavior = '';
+    toon('welkom');
     if (id) gaNaar(id);
-    markeerActief();
   };
 }
 bouwHandleiding();

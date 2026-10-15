@@ -5,6 +5,19 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.20 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.20.html`
+
+**Aangepast**
+- **De Handleiding toont nu één hoofdstuk tegelijk.** Links in de inhoudsopgave kies je een hoofdstuk; alleen dat hoofdstuk staat dan rechts. De onderdelen (A, B, C…) van het gekozen hoofdstuk staan onder de titel in de inhoudsopgave en springen naar de juiste plek. Onderaan elk hoofdstuk staan knoppen voor het vorige en het volgende hoofdstuk.
+
+**Nieuw in de Handleiding**
+- **7. Onderdelen kiezen: een eigen leerlijn voor één kind.** Verschil met een eigen pad, het venster openen via de drie puntjes bij een kind, alles wat je kunt aanpassen (aan/uit, plaatje, naam en zin, volgorde, onderdelen toevoegen of zelf maken), opslaan of terug naar standaard, en dezelfde keuzes gebruiken voor meerdere kinderen.
+- **8. Instellingen voor de hele klas.** Vakken aan/uit, de drie soorten tekstvelden en de handtekeningen (hoofdschakelaar, wie tekent, de tekst boven de vakjes, twee leerkrachten, en je handtekening uploaden), met een overzichtje voor snelle keuzes.
+- Het laatste hoofdstuk heet nu **Meer hulp** (met het e-mailadres voor vragen en de Snelle uitleg).
+
+---
+
 ## Versie 1.19 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.19.html`
 
