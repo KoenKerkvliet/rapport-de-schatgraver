@@ -5,6 +5,22 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.19 – 15 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.19.html`
+
+**Nieuw in de Handleiding** (drie nieuwe hoofdstukken, met afbeeldingen en genummerde aanwijzingen)
+- **4. Je klas opslaan en thuis verder werken.** Legt uit dat de tool bewust lokaal werkt (anders dan ParnasSys: geen gegevens van leerlingen op internet). Beschrijft stap voor stap hoe je school en thuis wisselt met een klasbestand (.json) in je OneDrive, wat je doet als je alleen op school werkt, wat het oranje bolletje bij *Klas bewaren* betekent, een tip om bij het downloaden zelf de map te kiezen, en een privacywaarschuwing over waar je het bestand bewaart.
+- **5. Het rapport invullen.**
+  - *De vier scores* (met de plantjes) en wat ze in het kort betekenen.
+  - *Tekst toevoegen* bij een vak en bij een onderdeel.
+  - *Eigen pad* voor Rekenen, Spelling en Taal.
+  - *De rubric bij Technisch lezen*, met een **kant-en-klare prompt voor Copilot** (met een knop *Kopieer de prompt*) om de rubric-zinnen om te zetten naar een vloeiend, kindvriendelijk verhaal in de jij-vorm.
+  - *Afsluitende tekst* (“Tot slot”) onderaan het rapport.
+- **6. Printen, PDF en opruimen.** Alle opties in het hoofdmenu: *Klas printen*, *Leerling printen*, *Rapport printen* bij een kind, *Exporteer PDF* en *Opruimen* (met een overzicht welke vinkjes je voor welke situatie kiest, zoals een nieuw schooljaar).
+- De inhoudsopgave in de Handleiding laat nu per hoofdstuk de onderdelen zien, en de welkomstpagina heeft kaarten voor alle zes hoofdstukken.
+
+---
+
 ## Versie 1.18 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.18.html`
 
