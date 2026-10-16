@@ -5,6 +5,26 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.25 – 16 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.25.html`
+
+**Nieuw**
+- **Groep 4 heeft een eigen inhoud**, volgens de input van de leerkrachten van groep 4 (niet meer een kopie van groep 8):
+  - *Rekenen:* Automatiseren, Tafels, Getalbegrip, Bewerkingen, Meten tijd en geld
+  - *Spelling:* Woorden, Zinnen, Leestekens
+  - *Taal:* Luisteren en spreken, Woordenschat
+  - *Technisch lezen:* Technisch lezen, Begrijpend lezen
+  - *Wereldoriëntatie:* Vier keer wijzer
+  - *Schrijven:* Handschrift
+  - *Creatief:* Tekenen, Handvaardigheid
+- **Begrijpend lezen staat alleen op rapport 2.** In rapport 1 is dit onderdeel niet zichtbaar en telt het niet mee. Dit kan voortaan bij elk onderdeel ingesteld worden (“alleen op rapport 2”). In *Onderdelen kiezen* staat bij zo’n onderdeel “Staat alleen op rapport 2”.
+- Verkeer en Engels staan niet op het rapport van groep 4. Een eigen pad kan voor Rekenen, Spelling en Taal.
+
+**Handleiding**
+- Bij *Onderdelen kiezen* staat een opmerking over onderdelen die alleen op rapport 2 staan.
+
+---
+
 ## Versie 1.24 – 16 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.24.html` (met de map `visuals` ernaast)
 
