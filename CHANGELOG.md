@@ -5,6 +5,18 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.24 – 16 oktober 2026
+Bestand: `rapport-de-schatgraver-v1.24.html` (met de map `visuals` ernaast)
+
+**Nieuw**
+- **Uitleg voor ouders**: twee A4-bladzijden in de stijl van het rapport, *Zo leest u het rapport*. Met de vier plantjes en wat ze betekenen, een voorbeeld van een vak met genummerde uitleg, het eigen pad, onderdelen op maat, technisch lezen, rapport 1 en 2 naast elkaar, tips om samen te lezen en waar ouders met vragen terechtkunnen. De voorbeelden komen uit een rapport met verzonnen gegevens.
+- De uitleg staat bij **Visuals** (voor alle groepen) om te printen of te downloaden. De PDF en de bron (HTML) staan ook in de map `Ouderuitleg`.
+
+**Aangepast**
+- Het **Tabblad Mijn schatten** is weggehaald uit Visuals; dat wordt altijd door een drukker gedrukt.
+
+---
+
 ## Versie 1.23 – 15 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.23.html` (met de map `visuals` ernaast)
 
