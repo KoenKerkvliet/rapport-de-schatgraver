@@ -5,6 +5,14 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.30 – 3 november 2026
+Bestand: `rapport-de-schatgraver-v1.30.html` (met de map `visuals` ernaast)
+
+**Verbeterd**
+- **De uitleg voor ouders past nu op één A4 voor- en achterkant** (twee bladzijden). Bij groep 3 t/m 8 viel de onderkant van de tweede bladzijde eraf. Het voorbeeld van Rekenen is iets lager gemaakt, de afbeeldingen bij *Een eigen pad* zijn kleiner en de ruimtes tussen de blokken zijn strakker. Op beide bladzijden blijft nu minstens 1 cm vrij onderaan. Ook de uitleg voor groep 1/2 is iets compacter gemaakt.
+
+---
+
 ## Versie 1.29 – 3 november 2026
 Bestand: `rapport-de-schatgraver-v1.29.html` (met de map `visuals` ernaast)
 
