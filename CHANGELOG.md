@@ -5,6 +5,22 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.29 – 3 november 2026
+Bestand: `rapport-de-schatgraver-v1.29.html` (met de map `visuals` ernaast)
+
+**Nieuw**
+- **Uitleg voor ouders van groep 1 en 2**: twee A4-bladzijden over de driepuntsschaal, met een voorbeeld uit het rapport van groep 1/2 (Rekenen, eigen pad), de vier gebieden (Rekenen, Taal, Motoriek, Spel) en tips om samen te kijken. De uitleg voor groep 3 t/m 8 blijft apart bestaan.
+- Bij **Visuals** staat *Uitleg voor ouders* nu met een groepkeuze: **groep 1-2** of **groep 3-8**. De groep waarin je werkt staat al klaar.
+
+**Aangepast**
+- **De bloemetjes zijn weg uit de handtekeningvakjes** op het rapport.
+
+**Handleiding**
+- Bij de scores staat nu dat de driepuntsschaal van groep 1/2 aansluit bij de manier van beoordelen met het digikeuzebord bij de kleuters.
+- De uitleg bij Visuals vermeldt de twee versies van de uitleg voor ouders.
+
+---
+
 ## Versie 1.28 – 3 november 2026
 Bestand: `rapport-de-schatgraver-v1.28.html`
 
