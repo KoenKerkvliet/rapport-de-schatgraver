@@ -571,6 +571,9 @@ dialog::backdrop{background:rgba(35,30,60,.35)}
 .rij-icoon svg{width:100%;height:100%;display:block}
 .rij-naam{font-size:10.8pt;line-height:1.2}
 .rij-zin{font-size:8.2pt;line-height:1.3;color:#6d6880;margin-top:.5mm}
+.rij.zonder-bollen .rij-hoofd{grid-template-columns:1fr}
+.rij.zonder-bollen .noot-plus{right:3mm;opacity:1}
+.vak-kop.zonder-niveaus{grid-template-columns:1fr}
 .rij-bollen{display:grid;grid-template-columns:repeat(4,1fr);align-items:center;justify-items:center;border-left:.3mm solid var(--cl)}
 .bol{width:8.4mm;height:8.4mm;border-radius:50%;border:.45mm solid #bdb9cb;background:#fff;display:grid;place-items:center;padding:0;position:relative}
 .bol img{width:7mm;height:7mm;display:block;pointer-events:none}
@@ -732,7 +735,7 @@ button.bol:hover .voorproef{opacity:.4}
       <button type="button" class="mf-knop" id="infoKnop" aria-expanded="false" aria-controls="infoTekst" title="Vragen of opmerkingen?" aria-label="Vragen of opmerkingen?"></button>
       <div class="mf-pop" id="infoTekst" role="status" hidden>Vragen of opmerkingen? Stuur het door naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a></div>
     </div>
-    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.25</button>
+    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.26</button>
     </div>
   <div class="zoom-balk" id="zoomBalk" hidden role="group" aria-label="Inzoomen op het rapport">
     <button type="button" id="zoomMin" aria-label="Uitzoomen" title="Uitzoomen">−</button>
@@ -894,9 +897,10 @@ button.bol:hover .voorproef{opacity:.4}
 <dialog id="dlgLogboek">
   <form class="dlg" method="dialog">
     <h2>Wat is er nieuw?</h2>
-    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.25.</p>
+    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.26.</p>
     <div class="log-inhoud">
-      <details open><summary><b>Versie 1.25</b> <span>16 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Groep 4 heeft een eigen inhoud</b>, volgens de input van de leerkrachten van groep 4 (niet meer een kopie van groep 8):</li><ul><li><i>Rekenen:</i> Automatiseren, Tafels, Getalbegrip, Bewerkingen, Meten tijd en geld</li><li><i>Spelling:</i> Woorden, Zinnen, Leestekens</li><li><i>Taal:</i> Luisteren en spreken, Woordenschat</li><li><i>Technisch lezen:</i> Technisch lezen, Begrijpend lezen</li><li><i>Wereldoriëntatie:</i> Vier keer wijzer</li><li><i>Schrijven:</i> Handschrift</li><li><i>Creatief:</i> Tekenen, Handvaardigheid</li></ul><li><b>Begrijpend lezen staat alleen op rapport 2.</b> In rapport 1 is dit onderdeel niet zichtbaar en telt het niet mee. Dit kan voortaan bij elk onderdeel ingesteld worden (“alleen op rapport 2”). In <i>Onderdelen kiezen</i> staat bij zo’n onderdeel “Staat alleen op rapport 2”.</li><li>Verkeer en Engels staan niet op het rapport van groep 4. Een eigen pad kan voor Rekenen, Spelling en Taal.</li></ul><h4>Handleiding</h4><ul><li>Bij <i>Onderdelen kiezen</i> staat een opmerking over onderdelen die alleen op rapport 2 staan.</li></ul></details>
+      <details open><summary><b>Versie 1.26</b> <span>3 november 2026</span></summary><h4>Aangepast (groep 4 t/m 8)</h4><ul><li><b>Technisch lezen heeft geen zin en geen bolletjes meer.</b> Het vak Technisch lezen blijft op het rapport staan, maar de zin <i>Ik lees vlot, nauwkeurig en met een goede intonatie</i> en de vier bolletjes zijn weggehaald. Ook de kolomtitels (<i>Let op mij</i>, <i>Ik groei stap voor stap</i>…) boven dit vak verdwijnen. In groep 4 staan die kolomtitels in rapport 2 wel boven het vak, omdat daar Begrijpend lezen met bolletjes bij komt.</li><li><b>Alleen de rubric blijft over.</b> Met <b>+ rubric</b> kies je de zinnen die bij het kind passen. Die komen als tekst bij Technisch lezen te staan, en je kunt de tekst daarna nog aanpassen. Het knopje is nu altijd goed zichtbaar.</li><li><b>De rubric staat nu ook bij groep 4</b> (eerder alleen groep 5 t/m 8).</li><li>In de lijst links telt Technisch lezen als ingevuld zodra er zinnen uit de rubric gekozen zijn.</li><li>Bolletjes die eerder bij Technisch lezen waren aangeklikt, blijven bewaard maar worden niet meer getoond.</li></ul><h4>Handleiding</h4><ul><li>De uitleg bij de rubric is aangepast: groep 4 t/m 8, geen bolletjes meer bij Technisch lezen. De Copilot-prompt is bijgewerkt naar groep 4 t/m 8.</li></ul></details>
+      <details><summary><b>Versie 1.25</b> <span>16 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Groep 4 heeft een eigen inhoud</b>, volgens de input van de leerkrachten van groep 4 (niet meer een kopie van groep 8):</li><ul><li><i>Rekenen:</i> Automatiseren, Tafels, Getalbegrip, Bewerkingen, Meten tijd en geld</li><li><i>Spelling:</i> Woorden, Zinnen, Leestekens</li><li><i>Taal:</i> Luisteren en spreken, Woordenschat</li><li><i>Technisch lezen:</i> Technisch lezen, Begrijpend lezen</li><li><i>Wereldoriëntatie:</i> Vier keer wijzer</li><li><i>Schrijven:</i> Handschrift</li><li><i>Creatief:</i> Tekenen, Handvaardigheid</li></ul><li><b>Begrijpend lezen staat alleen op rapport 2.</b> In rapport 1 is dit onderdeel niet zichtbaar en telt het niet mee. Dit kan voortaan bij elk onderdeel ingesteld worden (“alleen op rapport 2”). In <i>Onderdelen kiezen</i> staat bij zo’n onderdeel “Staat alleen op rapport 2”.</li><li>Verkeer en Engels staan niet op het rapport van groep 4. Een eigen pad kan voor Rekenen, Spelling en Taal.</li></ul><h4>Handleiding</h4><ul><li>Bij <i>Onderdelen kiezen</i> staat een opmerking over onderdelen die alleen op rapport 2 staan.</li></ul></details>
       <details><summary><b>Versie 1.24</b> <span>16 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Uitleg voor ouders</b>: twee A4-bladzijden in de stijl van het rapport, <i>Zo leest u het rapport</i>. Met de vier plantjes en wat ze betekenen, een voorbeeld van een vak met genummerde uitleg, het eigen pad, onderdelen op maat, technisch lezen, rapport 1 en 2 naast elkaar, tips om samen te lezen en waar ouders met vragen terechtkunnen. De voorbeelden komen uit een rapport met verzonnen gegevens.</li><li>De uitleg staat bij <b>Visuals</b> (voor alle groepen) om te printen of te downloaden. De PDF en de bron (HTML) staan ook in de map <code>Ouderuitleg</code>.</li></ul><h4>Aangepast</h4><ul><li>Het <b>Tabblad Mijn schatten</b> is weggehaald uit Visuals; dat wordt altijd door een drukker gedrukt.</li></ul></details>
       <details><summary><b>Versie 1.23</b> <span>15 oktober 2026</span></summary><h4>Nieuw</h4><ul><li><b>Visuals</b> in het hoofdmenu (de drie puntjes). Er opent een venster waarin je een visual kiest, de groep kiest en hem direct <b>print</b> of <b>downloadt</b>:</li><ul><li><i>Kennismakingsformulier</i> en <i>Zelfportret</i>: groep 1 tot en met 8.</li><li><i>Zo gaat het met mij</i>: groep 1-2, 3-4, 5-6 en 7-8.</li><li><i>Tabblad Mijn schatten</i>: voor alle groepen (A3).</li></ul><li>De groep waarin je werkt staat al klaar en je ziet meteen een voorbeeld.</li><li>De visuals staan als losse PDF's in de map <code>visuals</code> en worden pas opgehaald als je erop klikt. Het rapport zelf blijft daardoor even klein en snel. De PDF's zijn zonder zichtbaar kwaliteitsverlies kleiner gemaakt (samen ongeveer 8,5 MB).</li><li>Is een visual niet te vinden (bijvoorbeeld als het losse bestand zonder de map <code>visuals</code> wordt geopend)? Dan verschijnt een link naar de online versie.</li></ul><h4>Handleiding</h4><ul><li>Hoofdstuk 6 heeft een nieuw onderdeel <i>C. Visuals voor het portfolio</i>; <i>Opruimen</i> is nu onderdeel D.</li></ul></details>
       <details><summary><b>Versie 1.22</b> <span>15 oktober 2026</span></summary><h4>Verbeterd (Handleiding)</h4><ul><li><b>De Copilot-prompt bij de rubric is verbeterd</b>, zodat de tekst vloeiender wordt en niet steeds met “Je leest…” of “Je gebruikt…” begint. De prompt vraagt nu om één samenhangend verhaal met een rode draad, om zinnen samen te voegen met verbindingswoorden, om afwisselende zinsbegin en andere woorden, en om twee of drie korte alinea’s.</li><li>Nieuwe tip: wat je kunt typen als de tekst nog niet vloeiend genoeg is.</li></ul></details>
@@ -950,7 +954,7 @@ button.bol:hover .voorproef{opacity:.4}
       <li><b>Eigen pad.</b> Volgt een kind voor een vak een eigen pad? Klik links op de drie puntjes achter de naam van het kind en vink bij <i>Eigen pad voor</i> het vak aan. Er komt dan een extra bladzijde waarop je de doelen en een toelichting schrijft.</li>
       <li><b>Tekst erbij.</b> Klik op <i>+ tekst</i> bij een vak of onderdeel om er iets bij te typen. Laat je het leeg, dan komt er niets op het papier. Onderaan staat ruimte voor een afsluitende tekst. Bij <i>Instellingen</i> (in het menu rechtsboven) kun je tekstvelden en handtekeningvakjes (leerkracht, ouder, leerling) aan- of uitzetten.</li>
       <li><b>Groter of kleiner.</b> Onderin rechts in de dunne balk staat een zoomschuifje, zoals in Word. Met <i>+</i>, <i>−</i> of het schuifje maak je het rapport groter of kleiner; een klik op het percentage zet het terug naar de standaard. Je keuze wordt onthouden.</li>
-      <li><b>Rubric.</b> Bij Technisch lezen (groep 5 t/m 8) staat <i>+ rubric</i>. Daar vink je aan wat bij het kind past; met <i>Klaar</i> komen die zinnen in een tekstveld onder het onderdeel. Je kunt die tekst daarna nog aanpassen.</li>
+      <li><b>Rubric.</b> Bij Technisch lezen (groep 4 t/m 8) staat <i>+ rubric</i>. Daar vink je aan wat bij het kind past; met <i>Klaar</i> komen die zinnen in een tekstveld onder het onderdeel. Je kunt die tekst daarna nog aanpassen.</li>
       <li><b>Handtekening.</b> Maak een foto van je handtekening, haal de achtergrond weg (bijvoorbeeld in Canva) en bewaar hem als PNG. Lukt dat niet? Een foto of scan op wit papier mag ook: het rapport haalt de lichte achtergrond zelf weg. Upload hem bij <i>Instellingen</i> onder <i>Handtekening van de leerkracht</i>; hij komt dan vanzelf in het vakje op elk rapport.</li>
       <li><b>Eigen leerlijn.</b> Klik in de lijst links op de drie puntjes achter de naam van een kind en kies <i>Onderdelen kiezen</i> om voor dat kind onderdelen aan of uit te zetten, teksten te veranderen of een onderdeel uit een andere groep toe te voegen. Dit geldt alleen voor dat kind (of voor de kinderen die je erbij aanvinkt).</li>
       <li><b>Bewaren.</b> Alles wordt vanzelf bewaard in deze browser, op deze computer. Klik daarnaast af en toe op <i>Klas bewaren</i>: je krijgt dan een bestandje met je hele klas. Daarmee kun je later (of op een andere computer) verder via <i>Klas openen</i>.</li>
@@ -960,7 +964,7 @@ button.bol:hover .voorproef{opacity:.4}
       <li><b>Printen of PDF.</b> Open het menu rechtsboven (de drie puntjes) en kies <i>Leerling printen</i>, <i>Klas printen</i> of <i>Exporteer PDF</i>. Bij <i>Exporteer PDF</i> kies je in het printvenster <i>Opslaan als PDF</i>, en je kunt ook de hele klas in één PDF zetten. Zie je geen kleuren? Zet dan bij <i>Meer instellingen</i> het vinkje <i>Achtergrondafbeeldingen</i> aan.</li>
     </ol>
     <p class="tip">Privacy: de gegevens van de kinderen blijven op jouw computer. Er wordt niets via internet verstuurd.</p>
-    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.25</p>
+    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.26</p>
     <div class="knoppenrij"><button class="knop hoofd" value="ok">Begrepen</button></div>
   </form>
 </dialog>
@@ -1017,7 +1021,7 @@ const GROEP_8 = {
       ] },
     { id: 'technisch', naam: 'Technisch lezen', icoon: 'lees', kleur: '#a9b6f0', donker: '#5566c9', licht: '#e7eafc', inkt: '#1f2760',
       onderdelen: [
-        { id: 'technisch',    naam: 'Technisch lezen',      zin: 'Ik lees vlot, nauwkeurig en met de goede klemtoon.', icoon: 'lees' }
+        { id: 'technisch',    naam: 'Technisch lezen',      zin: '', icoon: 'lees', geenBolletjes: true }
       ] },
     { id: 'wereld', naam: 'Wereldoriëntatie', icoon: 'wereld', kleur: '#7fd0c4', donker: '#2f9d8f', licht: '#dcf3ef', inkt: '#0f3f39',
       onderdelen: [
@@ -1071,7 +1075,7 @@ const GROEP_8 = {
       { id: 'woordenschat', naam: 'Taal & woordenschat', zin: 'Ik ken veel woorden en gebruik ze goed.', icoon: 'lamp', groepen: '3–8' }
     ],
     technisch: [
-      { id: 'technisch',    naam: 'Technisch lezen', zin: 'Ik lees vlot, nauwkeurig en met de goede klemtoon.', icoon: 'lees', groepen: '' }
+      { id: 'technisch',    naam: 'Technisch lezen', zin: '', icoon: 'lees', geenBolletjes: true, groepen: '' }
     ],
     wereld: [
       { id: 'wereld',       naam: 'Wereldoriëntatie', zin: 'Ik leer over de wereld om mij heen.', icoon: 'wereld', groepen: '' },
@@ -1309,7 +1313,7 @@ delete RUBRICS.vloeiend; delete RUBRICS.leesvaardigheid;
 /* Groep 3 t/m 7: voor nu een kopie van de inhoud van groep 8. Engels staat pas vanaf groep 6 op het rapport.
    Zodra een groep een eigen inhoud krijgt, vervang je hieronder de kopie door een eigen blok zoals GROEP_8. */
 function kopieVanGroep8(id, metEngels){
-  const g = Object.assign({}, GROEP_8, { groep: id, label: id, rubrics: Number(id) >= 5 ? GROEP_8.rubrics : {} });
+  const g = Object.assign({}, GROEP_8, { groep: id, label: id, rubrics: Number(id) >= 4 ? GROEP_8.rubrics : {} });
   g.vakken = JSON.parse(JSON.stringify(GROEP_8.vakken)).filter((v) => metEngels || v.id !== 'engels');
   return g;
 }
@@ -1365,7 +1369,7 @@ const GROEP_4 = kopieVanGroep8('4', false);
       { id: 'woordenschat',  naam: 'Woordenschat',        zin: 'Ik ken veel woorden en gebruik ze goed.', icoon: 'boek' }
     ],
     technisch: [
-      { id: 'technisch',     naam: 'Technisch lezen',     zin: 'Ik lees vlot, nauwkeurig en met een goede intonatie.', icoon: 'lees' },
+      { id: 'technisch',     naam: 'Technisch lezen',     zin: '', icoon: 'lees', geenBolletjes: true },
       { id: 'begrijpend',    naam: 'Begrijpend lezen',    zin: 'Ik begrijp wat ik lees.', icoon: 'boek', alleenRapport: 2 }
     ],
     wereld: [
@@ -1686,7 +1690,7 @@ function voortgang(ll){
   for (const v of zichtbareVakken()) {
     const ep = ll.eigenPad[v.id];
     if (isEigenPad(ll, v)) { totaal++; if ((ep.doelen || '').trim()) klaar++; }
-    else for (const o of actieveOnderdelen(ll, v)) { totaal++; if (ll.scores[sleutel(v,o)] != null) klaar++; }
+    else for (const o of actieveOnderdelen(ll, v)) { totaal++; if (o.geenBolletjes ? (((ll.rubric[sleutel(v,o)] || {}).tekst) || '').trim() : ll.scores[sleutel(v,o)] != null) klaar++; }
   }
   return { totaal, klaar };
 }
@@ -1731,6 +1735,7 @@ function vakEenheid(ll, v, bewerkbaar, van, tot, vervolg){
   }
   const set = klas.instellingen;
   const rijenLijst = actieveOnderdelen(ll, v).slice(van, tot);
+  const heeftBollen = rijenLijst.some((o) => !o.geenBolletjes);
 
   let intro = '', kopPlus = '';
   if (set.vakTekst && van === 0) {
@@ -1761,14 +1766,15 @@ function vakEenheid(ll, v, bewerkbaar, van, tot, vervolg){
         else notaPlus = `<button type="button" class="plus" data-plus="${key}" title="Tekst bij dit onderdeel">+ tekst</button>`;
       } else if (w.trim()) noot = `<div class="rij-noot"><div class="noot-doos">${NOOT_BLAD}<div class="tekstblok">${esc(w.trim())}</div></div></div>`;
     }
-    return `<div class="rij${rubricId ? ' met-rubric' : ''}"><div class="rij-hoofd"><div class="rij-links"><span class="rij-icoon">${ICOON[o.icoon] || ''}</span>`
-      + `<div><div class="rij-naam">${esc(o.naam)}</div><div class="rij-zin">${esc(o.zin)}</div></div></div>`
-      + `<div class="rij-bollen">${bollen}</div></div>${notaPlus || rubricPlus ? `<span class="noot-plus">${notaPlus}${rubricPlus}</span>` : ''}${rubricBlok}${noot}</div>`;
+    const zonder = !!o.geenBolletjes;       // alleen een naam (en eventueel de rubric), geen zin en geen bolletjes
+    return `<div class="rij${rubricId ? ' met-rubric' : ''}${zonder ? ' zonder-bollen' : ''}"><div class="rij-hoofd"><div class="rij-links"><span class="rij-icoon">${ICOON[o.icoon] || ''}</span>`
+      + `<div><div class="rij-naam">${esc(o.naam)}</div>${o.zin ? `<div class="rij-zin">${esc(o.zin)}</div>` : ''}</div></div>`
+      + `${zonder ? '' : `<div class="rij-bollen">${bollen}</div>`}</div>${notaPlus || rubricPlus ? `<span class="noot-plus">${notaPlus}${rubricPlus}</span>` : ''}${rubricBlok}${noot}</div>`;
   }).join('');
 
   return `<div class="vak" style="${kleurStijl(v)}"><div class="vak-badge">${ICOON[v.icoon]}</div>`
-    + `<div class="vak-kop"><div class="vak-kopl"><div class="vak-naam">${esc(v.naam)}${vervolg ? ' <small style="font-size:.6em;letter-spacing:.02em;text-transform:none">(vervolg)</small>' : ''}</div>${kopPlus}</div>`
-    + `<div class="niveau-kop">${CONFIG.niveaus.map((n) => `<span>${esc(n)}</span>`).join('')}</div></div>`
+    + `<div class="vak-kop${heeftBollen ? '' : ' zonder-niveaus'}"><div class="vak-kopl"><div class="vak-naam">${esc(v.naam)}${vervolg ? ' <small style="font-size:.6em;letter-spacing:.02em;text-transform:none">(vervolg)</small>' : ''}</div>${kopPlus}</div>`
+    + `${heeftBollen ? `<div class="niveau-kop">${CONFIG.niveaus.map((n) => `<span>${esc(n)}</span>`).join('')}</div>` : ''}</div>`
     + `<div class="vak-lijf">${intro}${rijen}</div></div>`;
 }
 
@@ -2274,7 +2280,7 @@ $('#rbKlaar').addEventListener('click', () => {
     .filter(Boolean).join('\n');
   if (keuze.length) ll.rubric[rubricSleutel] = { keuze, tekst }; else delete ll.rubric[rubricSleutel];
   $('#dlgRubric').close();
-  bewaar(); renderPaginas();
+  bewaar(); renderLijst(); renderPaginas();
 });
 
 /* ============ Opruimen ============ */
@@ -2547,7 +2553,7 @@ Zo pak je het aan:
 - Voeg zinnen die bij elkaar horen samen tot langere, vloeiende zinnen. Gebruik daarvoor verbindingswoorden zoals "want", "omdat", "daardoor", "ook", "bovendien" en "dat zie je bijvoorbeeld aan".
 - Laat de zinnen op verschillende manieren beginnen. Begin hooguit twee zinnen na elkaar met "Je" en herhaal niet steeds hetzelfde werkwoord (zoals "lezen" of "gebruiken"). Zoek andere woorden en een andere zinsopbouw, bijvoorbeeld "Het lukt je goed om…", "Bij moeilijke woorden…", "Opvallend is dat…" of "Fijn om te zien is dat…".
 - Schrijf warm, positief en eerlijk, in twee of drie korte alinea's. Begin met wat al goed gaat en noem wat het kind nog gaat oefenen als een volgende stap, niet als iets wat mislukt is.
-- Gebruik woorden die een kind van groep 5 tot en met 8 goed begrijpt en spreek het kind rechtstreeks aan.
+- Gebruik woorden die een kind van groep 4 tot en met 8 goed begrijpt en spreek het kind rechtstreeks aan.
 - Verzin niets bij en laat niets weg: gebruik alleen wat in de tekst staat.
 - Gebruik geen opsomming, geen kopjes en geen sterretjes of andere opmaak.
 - Geef alleen de herschreven tekst terug, zonder uitleg ervoor of erna.
@@ -2609,7 +2615,7 @@ Tekst:
 
   const figRubric = `<figure class="hb-fig" aria-hidden="true">
       <div class="hb-rij" style="margin-bottom:12px"><div class="hb-rij-kop" style="background:#e8f2cf;color:#2f4313">Technisch lezen</div>
-        <div class="hb-rij-lijf"><div class="hb-rij-links"><b>Technisch lezen</b><span>…</span></div>${bolletjes(1)}</div>
+        <div class="hb-rij-lijf"><div class="hb-rij-links"><b>Technisch lezen</b></div></div>
         <div class="hb-rij-extra">${nr(1, '<span class="hb-plus">+ rubric</span>')}</div></div>
       <div class="hb-rb">
         <div></div><div class="k">Nog niet</div><div class="k">Met hulp</div><div class="k">Zelf</div><div class="k">Heel goed</div>
@@ -2871,7 +2877,7 @@ Tekst:
       </ol>
 
       <h4 id="hb-invullen-rubric">D. De rubric bij Technisch lezen</h4>
-      <p>Bij <b>Technisch lezen</b> (groep 5 tot en met 8) staat een knopje <span class="hb-plus">+ rubric</span>. Daarmee stel je een beschrijving van het kind samen uit kant-en-klare zinnen.</p>
+      <p>Bij <b>Technisch lezen</b> (groep 4 tot en met 8) staan <b>geen bolletjes</b> en geen zin, maar alleen een knopje <span class="hb-plus">+ rubric</span>. Daarmee stel je een beschrijving van het kind samen uit kant-en-klare zinnen. De tekst die daaruit komt, staat in een tekstveld bij Technisch lezen. In de lijst links telt Technisch lezen mee als ingevuld zodra je zinnen hebt gekozen.</p>
       ${figRubric}
       <ol class="hb-stappen">
         <li>Klik op <span class="hb-plus">+ rubric</span>. Er opent een venster met per onderwerp vier zinnen, van “Nog niet” tot “Heel goed”.</li>

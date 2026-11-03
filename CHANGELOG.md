@@ -5,6 +5,21 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.26 – 3 november 2026
+Bestand: `rapport-de-schatgraver-v1.26.html`
+
+**Aangepast (groep 4 t/m 8)**
+- **Technisch lezen heeft geen zin en geen bolletjes meer.** Het vak Technisch lezen blijft op het rapport staan, maar de zin *Ik lees vlot, nauwkeurig en met een goede intonatie* en de vier bolletjes zijn weggehaald. Ook de kolomtitels (*Let op mij*, *Ik groei stap voor stap*…) boven dit vak verdwijnen. In groep 4 staan die kolomtitels in rapport 2 wel boven het vak, omdat daar Begrijpend lezen met bolletjes bij komt.
+- **Alleen de rubric blijft over.** Met **+ rubric** kies je de zinnen die bij het kind passen. Die komen als tekst bij Technisch lezen te staan, en je kunt de tekst daarna nog aanpassen. Het knopje is nu altijd goed zichtbaar.
+- **De rubric staat nu ook bij groep 4** (eerder alleen groep 5 t/m 8).
+- In de lijst links telt Technisch lezen als ingevuld zodra er zinnen uit de rubric gekozen zijn.
+- Bolletjes die eerder bij Technisch lezen waren aangeklikt, blijven bewaard maar worden niet meer getoond.
+
+**Handleiding**
+- De uitleg bij de rubric is aangepast: groep 4 t/m 8, geen bolletjes meer bij Technisch lezen. De Copilot-prompt is bijgewerkt naar groep 4 t/m 8.
+
+---
+
 ## Versie 1.25 – 16 oktober 2026
 Bestand: `rapport-de-schatgraver-v1.25.html`
 
