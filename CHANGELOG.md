@@ -5,6 +5,25 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.28 – 3 november 2026
+Bestand: `rapport-de-schatgraver-v1.28.html`
+
+**Nieuw**
+- **Vijfpuntsschaal voor groep 3 t/m 8.** Er staan nu vijf cirkels per onderdeel, met deze termen: *Ik heb hulp nodig*, *Ik ben aan het leren*, *Ik kan het*, *Ik kan het goed* en *Ik blink uit*. Dit geldt voor het rapport op het scherm, op papier en in de PDF.
+- **Driepuntsschaal voor groep 1/2**: *Ik ben aan het leren*, *Ik kan het* en *Ik kan het goed*. Het aantal cirkels en kolommen past zich vanzelf aan.
+
+**Aangepast**
+- **Groep 1/2: Rekenen staat nu boven Taal.**
+- De kolomtitels zijn iets kleiner gemaakt, zodat vijf termen netjes passen.
+
+**Let op**
+- Een cirkel die al was aangeklikt blijft op dezelfde plek staan (bijvoorbeeld de derde cirkel). De betekenis daarvan is nu een andere term. Heeft iemand al rapporten ingevuld, dan is het verstandig die nog even na te kijken.
+
+**Handleiding**
+- De uitleg bij de scores is aangepast aan de nieuwe termen en de schaal van groep 1/2.
+
+---
+
 ## Versie 1.27 – 3 november 2026
 Bestand: `rapport-de-schatgraver-v1.27.html`
 
