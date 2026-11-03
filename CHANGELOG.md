@@ -5,6 +5,19 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.27 – 3 november 2026
+Bestand: `rapport-de-schatgraver-v1.27.html`
+
+**Aangepast**
+- **De plantjes in de bolletjes zijn vervangen door gewone cirkels.** Een gekozen cirkel wordt ingekleurd in de kleur van het vak. Een lege cirkel krijgt een lichte kleur als je er met de muis overheen gaat. De cirkels staan nog steeds op dezelfde plek, met dezelfde vier kolomtitels. Ook op papier en in de PDF zijn het nu ingekleurde cirkels.
+- **Creatief heet nu Expressie** (groep 3 t/m 8). Onder Expressie staan nu **Tekenen**, **Handvaardigheid**, **Muziek** en **Gymnastiek**. Eerder ingevulde gegevens bij Tekenen en Handvaardigheid blijven bewaard.
+- Nieuw plaatje (een muzieknootje) voor Muziek.
+
+**Handleiding**
+- De uitleg bij de vier scores is aangepast: ingekleurde cirkels in plaats van plantjes.
+
+---
+
 ## Versie 1.26 – 3 november 2026
 Bestand: `rapport-de-schatgraver-v1.26.html`
 
