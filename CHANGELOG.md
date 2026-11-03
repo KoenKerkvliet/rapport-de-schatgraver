@@ -5,6 +5,18 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.31 – 3 november 2026
+Bestand: `rapport-de-schatgraver-v1.31.html` (met de map `visuals` ernaast)
+
+**Aangepast**
+- **Groep 1/2 werkt niet met een eigen pad.** De keuze *Eigen pad voor* staat bij groep 1/2 niet meer in het menu van een kind, en er komt geen extra bladzijde *Ik volg mijn eigen pad* meer. Het is niet verwijderd maar uitgezet (in de code staat per vak `eigenPad: false`), zodat het weer aangezet kan worden als het toch nodig is. Voor groep 3 t/m 8 is er niets veranderd.
+- **De uitleg voor ouders van groep 1/2 is aangepast:** het voorbeeld gaat nu over tellen en rangschikken in plaats van meten met een liniaal, en het onderdeel *Een eigen pad* is eruit gehaald. Daarvoor in de plaats staat een overzicht van de vier gebieden (Rekenen, Taal, Motoriek, Spel) met hun onderdelen.
+
+**Handleiding**
+- Bij *Eigen pad* staat nu dat dit niet beschikbaar is in groep 1/2.
+
+---
+
 ## Versie 1.30 – 3 november 2026
 Bestand: `rapport-de-schatgraver-v1.30.html` (met de map `visuals` ernaast)
 
