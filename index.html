@@ -737,7 +737,7 @@ button.bol:hover:not(.aan){background:var(--cl)}
       <button type="button" class="mf-knop" id="infoKnop" aria-expanded="false" aria-controls="infoTekst" title="Vragen of opmerkingen?" aria-label="Vragen of opmerkingen?"></button>
       <div class="mf-pop" id="infoTekst" role="status" hidden>Vragen of opmerkingen? Stuur het door naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a></div>
     </div>
-    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.31</button>
+    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.32</button>
     </div>
   <div class="zoom-balk" id="zoomBalk" hidden role="group" aria-label="Inzoomen op het rapport">
     <button type="button" id="zoomMin" aria-label="Uitzoomen" title="Uitzoomen">−</button>
@@ -899,9 +899,10 @@ button.bol:hover:not(.aan){background:var(--cl)}
 <dialog id="dlgLogboek">
   <form class="dlg" method="dialog">
     <h2>Wat is er nieuw?</h2>
-    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.31.</p>
+    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.32.</p>
     <div class="log-inhoud">
-      <details open><summary><b>Versie 1.31</b> <span>3 november 2026</span></summary><h4>Aangepast</h4><ul><li><b>Groep 1/2 werkt niet met een eigen pad.</b> De keuze <i>Eigen pad voor</i> staat bij groep 1/2 niet meer in het menu van een kind, en er komt geen extra bladzijde <i>Ik volg mijn eigen pad</i> meer. Het is niet verwijderd maar uitgezet (in de code staat per vak <code>eigenPad: false</code>), zodat het weer aangezet kan worden als het toch nodig is. Voor groep 3 t/m 8 is er niets veranderd.</li><li><b>De uitleg voor ouders van groep 1/2 is aangepast:</b> het voorbeeld gaat nu over tellen en rangschikken in plaats van meten met een liniaal, en het onderdeel <i>Een eigen pad</i> is eruit gehaald. Daarvoor in de plaats staat een overzicht van de vier gebieden (Rekenen, Taal, Motoriek, Spel) met hun onderdelen.</li></ul><h4>Handleiding</h4><ul><li>Bij <i>Eigen pad</i> staat nu dat dit niet beschikbaar is in groep 1/2.</li></ul></details>
+      <details open><summary><b>Versie 1.32</b> <span>5 november 2026</span></summary><h4>Nieuw</h4><ul><li><b>Groep 1 en groep 2 hebben nu elk een eigen rapport.</b> In de groepkeuze staan <i>1</i> en <i>2</i> los van elkaar (eerder <i>1 / 2</i>). De gebieden en onderdelen blijven gelijk (Rekenen, Taal, Motoriek, Spel), maar de ik-zinnen zijn per groep verschillend, volgens de input van de leerkrachten. Bijvoorbeeld bij Getallen: groep 1 <i>t/m 10</i>, groep 2 <i>t/m 20</i>. Beide groepen werken met de driepuntsschaal en zonder eigen pad.</li><li><b>Gegevens blijven bewaard.</b> Had je al een klas ingevuld in het gezamenlijke rapport voor groep 1/2? Die wordt eenmalig overgezet naar de eerste kleutergroep die je opent (meestal groep 1), en een kopie blijft veilig in de browser staan. Zijn er kinderen van de andere groep bij, verwijder ze dan via de drie puntjes achter hun naam. Een eerder bewaard klasbestand van groep 1/2 kan gewoon geopend worden in groep 1 of groep 2.</li><li><b>Uitleg voor ouders</b> heeft nu een eigen versie voor groep 1, voor groep 2 en voor groep 3 t/m 8 (zie Visuals).</li></ul><h4>Handleiding</h4><ul><li>Teksten over groep 1/2 zijn aangepast naar groep 1 en groep 2.</li></ul></details>
+      <details><summary><b>Versie 1.31</b> <span>3 november 2026</span></summary><h4>Aangepast</h4><ul><li><b>Groep 1/2 werkt niet met een eigen pad.</b> De keuze <i>Eigen pad voor</i> staat bij groep 1/2 niet meer in het menu van een kind, en er komt geen extra bladzijde <i>Ik volg mijn eigen pad</i> meer. Het is niet verwijderd maar uitgezet (in de code staat per vak <code>eigenPad: false</code>), zodat het weer aangezet kan worden als het toch nodig is. Voor groep 3 t/m 8 is er niets veranderd.</li><li><b>De uitleg voor ouders van groep 1/2 is aangepast:</b> het voorbeeld gaat nu over tellen en rangschikken in plaats van meten met een liniaal, en het onderdeel <i>Een eigen pad</i> is eruit gehaald. Daarvoor in de plaats staat een overzicht van de vier gebieden (Rekenen, Taal, Motoriek, Spel) met hun onderdelen.</li></ul><h4>Handleiding</h4><ul><li>Bij <i>Eigen pad</i> staat nu dat dit niet beschikbaar is in groep 1/2.</li></ul></details>
       <details><summary><b>Versie 1.30</b> <span>3 november 2026</span></summary><h4>Verbeterd</h4><ul><li><b>De uitleg voor ouders past nu op één A4 voor- en achterkant</b> (twee bladzijden). Bij groep 3 t/m 8 viel de onderkant van de tweede bladzijde eraf. Het voorbeeld van Rekenen is iets lager gemaakt, de afbeeldingen bij <i>Een eigen pad</i> zijn kleiner en de ruimtes tussen de blokken zijn strakker. Op beide bladzijden blijft nu minstens 1 cm vrij onderaan. Ook de uitleg voor groep 1/2 is iets compacter gemaakt.</li></ul></details>
       <details><summary><b>Versie 1.29</b> <span>3 november 2026</span></summary><h4>Nieuw</h4><ul><li><b>Uitleg voor ouders van groep 1 en 2</b>: twee A4-bladzijden over de driepuntsschaal, met een voorbeeld uit het rapport van groep 1/2 (Rekenen, eigen pad), de vier gebieden (Rekenen, Taal, Motoriek, Spel) en tips om samen te kijken. De uitleg voor groep 3 t/m 8 blijft apart bestaan.</li><li>Bij <b>Visuals</b> staat <i>Uitleg voor ouders</i> nu met een groepkeuze: <b>groep 1-2</b> of <b>groep 3-8</b>. De groep waarin je werkt staat al klaar.</li></ul><h4>Aangepast</h4><ul><li><b>De bloemetjes zijn weg uit de handtekeningvakjes</b> op het rapport.</li></ul><h4>Handleiding</h4><ul><li>Bij de scores staat nu dat de driepuntsschaal van groep 1/2 aansluit bij de manier van beoordelen met het digikeuzebord bij de kleuters.</li><li>De uitleg bij Visuals vermeldt de twee versies van de uitleg voor ouders.</li></ul></details>
       <details><summary><b>Versie 1.28</b> <span>3 november 2026</span></summary><h4>Nieuw</h4><ul><li><b>Vijfpuntsschaal voor groep 3 t/m 8.</b> Er staan nu vijf cirkels per onderdeel, met deze termen: <i>Ik heb hulp nodig</i>, <i>Ik ben aan het leren</i>, <i>Ik kan het</i>, <i>Ik kan het goed</i> en <i>Ik blink uit</i>. Dit geldt voor het rapport op het scherm, op papier en in de PDF.</li><li><b>Driepuntsschaal voor groep 1/2</b>: <i>Ik ben aan het leren</i>, <i>Ik kan het</i> en <i>Ik kan het goed</i>. Het aantal cirkels en kolommen past zich vanzelf aan.</li></ul><h4>Aangepast</h4><ul><li><b>Groep 1/2: Rekenen staat nu boven Taal.</b></li><li>De kolomtitels zijn iets kleiner gemaakt, zodat vijf termen netjes passen.</li></ul><h4>Let op</h4><ul><li>Een cirkel die al was aangeklikt blijft op dezelfde plek staan (bijvoorbeeld de derde cirkel). De betekenis daarvan is nu een andere term. Heeft iemand al rapporten ingevuld, dan is het verstandig die nog even na te kijken.</li></ul><h4>Handleiding</h4><ul><li>De uitleg bij de scores is aangepast aan de nieuwe termen en de schaal van groep 1/2.</li></ul></details>
@@ -971,7 +972,7 @@ button.bol:hover:not(.aan){background:var(--cl)}
       <li><b>Printen of PDF.</b> Open het menu rechtsboven (de drie puntjes) en kies <i>Leerling printen</i>, <i>Klas printen</i> of <i>Exporteer PDF</i>. Bij <i>Exporteer PDF</i> kies je in het printvenster <i>Opslaan als PDF</i>, en je kunt ook de hele klas in één PDF zetten. Zie je geen kleuren? Zet dan bij <i>Meer instellingen</i> het vinkje <i>Achtergrondafbeeldingen</i> aan.</li>
     </ol>
     <p class="tip">Privacy: de gegevens van de kinderen blijven op jouw computer. Er wordt niets via internet verstuurd.</p>
-    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.31</p>
+    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.32</p>
     <div class="knoppenrij"><button class="knop hoofd" value="ok">Begrepen</button></div>
   </form>
 </dialog>
@@ -1402,8 +1403,46 @@ const GROEP_4 = kopieVanGroep8('4', false);
 const GROEP_5 = kopieVanGroep8('5', false);
 const GROEP_6 = kopieVanGroep8('6', true);
 const GROEP_7 = kopieVanGroep8('7', true);
-const GROEPEN = { '1-2': GROEP_12, '3': GROEP_3, '4': GROEP_4, '5': GROEP_5, '6': GROEP_6, '7': GROEP_7, '8': GROEP_8 };
-const GROEP_VOLGORDE = ['1-2', '3', '4', '5', '6', '7', '8'];
+/* Groep 1 en groep 2: dezelfde gebieden en onderdelen, maar elk met eigen ik-zinnen.
+   (GROEP_12 hierboven is alleen de basis; de onderdeel-id's blijven gelijk, zodat al ingevulde gegevens bewaard blijven.) */
+const KLEUTER_ZINNEN = {
+  '1': {
+    mondeling: 'Ik praat in zinnen en vertel wat ik denk en voel.',
+    auditief: 'Ik hoor rijmpjes en doe mee met versjes.',
+    geletterdheid: 'Ik geniet van voorlezen en herken mijn eigen naam.',
+    'k-getallen': 'Ik tel, ken de getallen en vergelijk hoeveelheden t/m 10.',
+    'k-meten': 'Ik vergelijk lang en kort, zwaar en licht, vol en leeg, groot en klein.',
+    'k-meetkunde': 'Ik ken vormen, kleuren en herken patronen.',
+    fijne: 'Ik knip en teken en doe dit zorgvuldig.',
+    grove: 'Ik ren, spring, klim en houd mijn evenwicht.',
+    spelkwaliteit: 'Ik speel met fantasie en bedenk mijn eigen spel met materiaal.',
+    contact: 'Ik ontdek het samenspel met andere kinderen.'
+  },
+  '2': {
+    mondeling: 'Ik praat in goed geformuleerde zinnen en vertel samenhangend wat ik denk en voel.',
+    auditief: 'Ik hoor klanken en woorden.',
+    geletterdheid: 'Ik ken en herken letters en ontdek hoe ik zelf dingen kan schrijven.',
+    'k-getallen': 'Ik tel, ken de getallen en vergelijk hoeveelheden t/m 20.',
+    'k-meten': 'Ik vergelijk en orden op lengte en gewicht.',
+    'k-meetkunde': 'Ik maak puzzels en bouw constructies na.',
+    fijne: 'Ik knip, teken en maak schrijfpatronen zorgvuldig met mijn voorkeurshand.',
+    grove: 'Ik ren, spring, klim en verbeter mijn evenwicht en coördinatie.',
+    spelkwaliteit: 'Ik speel met fantasie en bedenk spel met diepgang.',
+    contact: 'Ik speel samen met andere kinderen en maak afspraken.'
+  }
+};
+function maakKleutergroep(id){
+  const g = JSON.parse(JSON.stringify(GROEP_12));
+  g.groep = id; g.label = id;
+  const zinnen = KLEUTER_ZINNEN[id];
+  for (const v of g.vakken) for (const o of v.onderdelen) if (zinnen[o.id]) o.zin = zinnen[o.id];
+  for (const vak of ['taal', 'rekenen']) for (const o of g.bibliotheek[vak]) if (o.groepen === '1–2' && zinnen[o.id]) { o.zin = zinnen[o.id]; o.groepen = id; }
+  return g;
+}
+const GROEP_1 = maakKleutergroep('1');
+const GROEP_2 = maakKleutergroep('2');
+const GROEPEN = { '1': GROEP_1, '2': GROEP_2, '3': GROEP_3, '4': GROEP_4, '5': GROEP_5, '6': GROEP_6, '7': GROEP_7, '8': GROEP_8 };
+const GROEP_VOLGORDE = ['1', '2', '3', '4', '5', '6', '7', '8'];
 const LAATSTE_GROEP_SLEUTEL = 'rapport-schatgraver-laatste-groep';
 let CONFIG = null;
 function zetGroep(id){
@@ -1661,6 +1700,17 @@ function laad(){
   try {
     let sl = CONFIG.opslagSleutel;
     if (localStorage.getItem(sl) === null && CONFIG.groep === '8' && localStorage.getItem(OUDE_SLEUTEL_8) !== null) sl = OUDE_SLEUTEL_8;   // eerder bewaard in het losse bestand van groep 8
+    // eerder bewaard in het gezamenlijke rapport voor groep 1/2: eenmalig overzetten naar de eerste kleutergroep die geopend wordt
+    const oud12 = localStorage.getItem('rapport-schatgraver-groep-1-2');
+    if (localStorage.getItem(sl) === null && (CONFIG.groep === '1' || CONFIG.groep === '2') && oud12 !== null) {
+      try {
+        const d12 = JSON.parse(oud12); d12.groep = CONFIG.groep;
+        localStorage.setItem(sl, JSON.stringify(d12));
+        localStorage.setItem(sl + ':backup', 'nodig');
+        localStorage.setItem('rapport-schatgraver-groep-1-2-oud', oud12);
+        localStorage.removeItem('rapport-schatgraver-groep-1-2');
+      } catch (e) {}
+    }
     const ruw = localStorage.getItem(sl);
     nietGebackupt = localStorage.getItem(sl + ':backup') === 'nodig';
     if (ruw) return normaliseer(JSON.parse(ruw));
@@ -2174,8 +2224,10 @@ function openKlas(bestand){
     let d;
     try { d = JSON.parse(lezer.result); } catch (e) { alert('Dit bestand kan ik niet lezen. Kies een klasbestand dat je eerder met “Klas bewaren” hebt gemaakt.'); return; }
     if (!d || !Array.isArray(d.leerlingen)) { alert('Dit is geen klasbestand van het rapport.'); return; }
-    const doel = GROEPEN[String(d.groep)] ? String(d.groep) : CONFIG.groep;
-    if (d.groep && !GROEPEN[String(d.groep)] && !confirm(`Dit klasbestand is van groep ${d.groep}, die zit nog niet in dit rapport. Toch openen als groep ${CONFIG.label}?`)) return;
+    const oudKleuter = String(d.groep) === '1-2';       // klasbestand van het oude gezamenlijke rapport voor groep 1/2
+    const doel = oudKleuter ? ((CONFIG.groep === '1' || CONFIG.groep === '2') ? CONFIG.groep : '1') : (GROEPEN[String(d.groep)] ? String(d.groep) : CONFIG.groep);
+    if (oudKleuter) alert(`Dit klasbestand komt van het oude, gezamenlijke rapport voor groep 1/2. Het wordt geopend in groep ${doel}. Heb je kinderen uit de andere groep erbij staan? Verwijder die dan bij die kinderen via de drie puntjes.`);
+    if (d.groep && !oudKleuter && !GROEPEN[String(d.groep)] && !confirm(`Dit klasbestand is van groep ${d.groep}, die zit nog niet in dit rapport. Toch openen als groep ${CONFIG.label}?`)) return;
     if (doel !== CONFIG.groep) {                         // bestand hoort bij een andere groep: ga eerst naar die groep
       const huidig = klas.leerlingen.length;
       wisselGroep(doel, true);
@@ -2381,16 +2433,16 @@ const VISUALS = [
     uitleg: 'Een lijst waarin het kind zichzelf tekent.' },
   { id: 'zogaat', naam: 'Zo gaat het met mij', bestand: 'zo-gaat-het-met-mij', groepen: VIS_PAREN, formaat: 'A4',
     uitleg: 'Leerling en leerkracht kleuren in hoe het gaat.' },
-  { id: 'ouders', naam: 'Uitleg voor ouders', bestand: 'uitleg-voor-ouders', groepen: ['1-2', '3-8'], formaat: 'A4',
+  { id: 'ouders', naam: 'Uitleg voor ouders', bestand: 'uitleg-voor-ouders', groepen: ['1', '2', '3-8'], formaat: 'A4',
     info: 'A4 · PDF · twee bladzijden. Print dubbelzijdig.',
-    uitleg: 'Zo leest u het rapport: uitleg voor ouders en verzorgers, voor groep 1/2 of groep 3 t/m 8.' }
+    uitleg: 'Zo leest u het rapport: uitleg voor ouders en verzorgers, voor groep 1, groep 2 of groep 3 t/m 8.' }
 ];
 let visKeuze = 'kennismaking';
 const visGroepKeuze = {};
 const visStandaardGroep = (v) => {
   if (!v.groepen) return null;
   const n = parseInt(CONFIG.groep, 10) || 1;
-  if (v.id === 'ouders') return n <= 2 ? '1-2' : '3-8';
+  if (v.id === 'ouders') return n <= 2 ? String(n) : '3-8';
   return v.groepen === VIS_PAREN ? VIS_PAREN[Math.min(3, Math.floor((n - 1) / 2))] : String(n);
 };
 const visGroep = (v) => (v.groepen ? (visGroepKeuze[v.id] || visStandaardGroep(v)) : null);
@@ -2746,7 +2798,7 @@ Tekst:
       <p>Deze handleiding open je altijd weer met het vraagtekenknopje ${ico('hulp', ' rond')} rechtsboven in de balk, naast de drie puntjes ${ico('puntjes', ' rond')}.</p>` },
 
     { id: 'groep', nr: 1, titel: 'Kies je groep', html: `
-      <p class="hb-intro">Het rapport bestaat voor groep 1/2 tot en met groep 8. Elke groep heeft zijn eigen vakken en onderdelen. Daarom begin je met het kiezen van <b>jouw</b> groep.</p>
+      <p class="hb-intro">Het rapport bestaat voor groep 1 tot en met groep 8. Elke groep heeft zijn eigen vakken en onderdelen. Daarom begin je met het kiezen van <b>jouw</b> groep.</p>
       ${figHeader}
       <ol class="hb-stappen">
         <li><b>Zoek de groepknop.</b> Kijk rechtsboven in de balk. Daar staat een ronde knop met een groepnummer en een klein pijltje, zoals ${groepKnopTekst}. Dat is de groep waarin je nu werkt.</li>
@@ -2859,7 +2911,7 @@ Tekst:
       <p>In de lijst links staat achter elke naam hoeveel onderdelen al zijn ingevuld, bijvoorbeeld <b>3/12</b>. Is een kind helemaal klaar, dan kleurt dat getal groen.</p>
 
       <h4 id="hb-invullen-scores">A. De scores</h4>
-      <p>Bij elk onderdeel staan vijf bolletjes (in groep 1/2 drie). Je klikt het bolletje aan dat bij het kind past. Het bolletje wordt ingekleurd. Klik je er nog een keer op, dan wordt het weer leeg.</p>
+      <p>Bij elk onderdeel staan vijf bolletjes (in groep 1 en 2 drie). Je klikt het bolletje aan dat bij het kind past. Het bolletje wordt ingekleurd. Klik je er nog een keer op, dan wordt het weer leeg.</p>
       ${figNiveaus}
       <ul>
         <li><b>${esc(GEDEELD.niveaus[0])}:</b> dit onderdeel vraagt extra aandacht en begeleiding.</li>
@@ -2868,7 +2920,7 @@ Tekst:
         <li><b>${esc(GEDEELD.niveaus[3])}:</b> het kind beheerst dit onderdeel goed.</li>
         <li><b>${esc(GEDEELD.niveaus[4])}:</b> het kind doet dit uitzonderlijk goed, ruim boven wat we verwachten.</li>
       </ul>
-      <p><b>Groep 1/2</b> werkt met een schaal van <b>drie</b> bolletjes: <i>Ik ben aan het leren</i>, <i>Ik kan het</i> en <i>Ik kan het goed</i>. Deze driepuntsschaal sluit aan bij de manier van beoordelen met het <b>digikeuzebord</b> bij de kleuters.</p>
+      <p><b>Groep 1 en 2</b> werken met een schaal van <b>drie</b> bolletjes: <i>Ik ben aan het leren</i>, <i>Ik kan het</i> en <i>Ik kan het goed</i>. Deze driepuntsschaal sluit aan bij de manier van beoordelen met het <b>digikeuzebord</b> bij de kleuters.</p>
       <div class="hb-tip">Hanteer de betekenis die jullie als team hebben afgesproken. Bovenstaande is een korte samenvatting.</div>
       ${figScore}
 
@@ -2886,7 +2938,7 @@ Tekst:
       </ul>
 
       <h4 id="hb-invullen-pad">C. Eigen pad voor Rekenen, Spelling en Taal</h4>
-      <p>Volgt een kind voor een vak een <b>eigen leerpad</b> met eigen doelen? Dan vervang je de bolletjes van dat vak door een eigen bladzijde. Dit kan voor <b>Rekenen, Spelling en Taal</b>. In het menu van het kind zie je alleen de vakken waarvoor dat kan. In groep 1/2 is een eigen pad niet beschikbaar.</p>
+      <p>Volgt een kind voor een vak een <b>eigen leerpad</b> met eigen doelen? Dan vervang je de bolletjes van dat vak door een eigen bladzijde. Dit kan voor <b>Rekenen, Spelling en Taal</b>. In het menu van het kind zie je alleen de vakken waarvoor dat kan. In groep 1 en 2 is een eigen pad niet beschikbaar.</p>
       ${figEigenPad}
       <ol class="hb-stappen">
         <li>Klik in de lijst links op de <b>drie puntjes</b> achter de naam van het kind.</li>
@@ -2969,12 +3021,12 @@ Tekst:
         </div></div>
         <figcaption>(1) Kies een visual. (2) Kies de groep. (3) Download of print hem.</figcaption></figure>
       <ol class="hb-stappen">
-        <li><b>Kies een visual.</b> Er zijn vier visuals: het <i>Kennismakingsformulier</i> en het <i>Zelfportret</i> (voor groep 1 tot en met 8), <i>Zo gaat het met mij</i> (voor groep 1-2, 3-4, 5-6 en 7-8) en de <i>Uitleg voor ouders</i>: twee bladzijden waarin staat hoe ouders het nieuwe rapport kunnen lezen, met een versie voor groep 1/2 (drie niveaus) en een voor groep 3 t/m 8 (vijf niveaus).</li>
+        <li><b>Kies een visual.</b> Er zijn vier visuals: het <i>Kennismakingsformulier</i> en het <i>Zelfportret</i> (voor groep 1 tot en met 8), <i>Zo gaat het met mij</i> (voor groep 1-2, 3-4, 5-6 en 7-8) en de <i>Uitleg voor ouders</i>: twee bladzijden waarin staat hoe ouders het nieuwe rapport kunnen lezen, met een versie voor groep 1 en een voor groep 2 (beide drie niveaus) en een voor groep 3 t/m 8 (vijf niveaus).</li>
         <li><b>Kies de groep.</b> De groep waarin je werkt staat al klaar. Rechts zie je meteen een voorbeeld.</li>
         <li><b>Printen</b> opent het printvenster met de visual. <b>Downloaden</b> slaat de PDF op, bijvoorbeeld om hem bij de repro te laten printen.</li>
       </ol>
       <ul>
-        <li>De <b>Uitleg voor ouders</b> bestaat uit twee bladzijden. Kies de versie bij jouw groep (groep 1/2 of groep 3 t/m 8). Print hem dubbelzijdig, of deel de PDF via de manier die de school daarvoor gebruikt.</li>
+        <li>De <b>Uitleg voor ouders</b> bestaat uit twee bladzijden. Kies de versie bij jouw groep (groep 1, groep 2 of groep 3 t/m 8). Print hem dubbelzijdig, of deel de PDF via de manier die de school daarvoor gebruikt.</li>
         <li>De visuals worden pas opgehaald als je erop klikt. Het rapport blijft daardoor even snel.</li>
         <li>De visuals zijn lege formulieren zonder gegevens van kinderen.</li>
       </ul>

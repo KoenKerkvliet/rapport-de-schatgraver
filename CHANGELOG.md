@@ -5,6 +5,19 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.32 – 5 november 2026
+Bestand: `rapport-de-schatgraver-v1.32.html` (met de map `visuals` ernaast)
+
+**Nieuw**
+- **Groep 1 en groep 2 hebben nu elk een eigen rapport.** In de groepkeuze staan *1* en *2* los van elkaar (eerder *1 / 2*). De gebieden en onderdelen blijven gelijk (Rekenen, Taal, Motoriek, Spel), maar de ik-zinnen zijn per groep verschillend, volgens de input van de leerkrachten. Bijvoorbeeld bij Getallen: groep 1 *t/m 10*, groep 2 *t/m 20*. Beide groepen werken met de driepuntsschaal en zonder eigen pad.
+- **Gegevens blijven bewaard.** Had je al een klas ingevuld in het gezamenlijke rapport voor groep 1/2? Die wordt eenmalig overgezet naar de eerste kleutergroep die je opent (meestal groep 1), en een kopie blijft veilig in de browser staan. Zijn er kinderen van de andere groep bij, verwijder ze dan via de drie puntjes achter hun naam. Een eerder bewaard klasbestand van groep 1/2 kan gewoon geopend worden in groep 1 of groep 2.
+- **Uitleg voor ouders** heeft nu een eigen versie voor groep 1, voor groep 2 en voor groep 3 t/m 8 (zie Visuals).
+
+**Handleiding**
+- Teksten over groep 1/2 zijn aangepast naar groep 1 en groep 2.
+
+---
+
 ## Versie 1.31 – 3 november 2026
 Bestand: `rapport-de-schatgraver-v1.31.html` (met de map `visuals` ernaast)
 
