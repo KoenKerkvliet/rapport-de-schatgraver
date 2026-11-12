@@ -5,6 +5,17 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.36 – 12 november 2026
+Bestand: `rapport-de-schatgraver-v1.36.html` (met de map `visuals` ernaast)
+
+**Nieuw**
+- **Roadmap** in het hoofdmenu (de drie puntjes, onder *Handleiding*). Een venster met drie kolommen: **Gepland**, **In ontwikkeling** en **Voltooid**. Zo is te zien waar aan gewerkt wordt. Bij *Gepland* staan nu: *Subcategorieën rekenen groepen 5 & 6* en *Subcategorieën rekenen groepen 7 & 8*.
+
+**Aangepast (groep 5 t/m 8)**
+- **Rekenen heeft nu één onderdeel, dat ook Rekenen heet.** De vier subcategorieën (Getallen & bewerkingen, Breuken, procenten & verhoudingen, Meten & meetkunde, Verbanden & grafieken) staan er voorlopig niet meer op, omdat die later weer terugkomen (zie de Roadmap). Eerder ingevulde gegevens bij die onderdelen blijven bewaard, maar worden niet getoond. Een eigen pad voor Rekenen kan nog steeds.
+
+---
+
 ## Versie 1.35 – 12 november 2026
 Bestand: `rapport-de-schatgraver-v1.35.html` (met de map `visuals` ernaast)
 

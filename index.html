@@ -351,6 +351,17 @@ button,input,textarea{font:inherit;color:inherit}
 .hb-cirkels{display:flex;gap:6px;padding:8px 0 4px}
 .hb-niv .hb-bol{width:16px;height:16px;border-width:1.6px}
 .hb-bol.aan{border:2.4px solid #d1418f;background:#d1418f;box-shadow:inset 0 0 0 3px #fff}
+/* Roadmap */
+#dlgRoadmap{max-width:900px}
+.rm-intro{margin:0 0 14px;color:var(--ui-zacht);font-size:14px}
+.rm-kolommen{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rm-kol{background:#f6f7fb;border:1px solid var(--ui-lijn);border-radius:14px;padding:12px;min-height:150px}
+.rm-kol h3{display:flex;align-items:center;gap:8px;margin:0 0 4px;font-size:15px}
+.rm-kol h3 i{width:11px;height:11px;border-radius:50%;flex:none}
+.rm-kol h3 span{margin-left:auto;font-size:12px;font-weight:700;color:var(--ui-zacht);background:#fff;border:1px solid var(--ui-lijn);border-radius:999px;padding:0 8px}
+.rm-kaart{background:#fff;border:1px solid var(--ui-lijn);border-radius:10px;padding:9px 11px;margin-top:8px;font-size:14px;line-height:1.4;font-weight:600}
+.rm-leeg{margin:10px 0 0;font-size:13px;color:var(--ui-zacht);font-style:italic}
+@media (max-width:760px){.rm-kolommen{grid-template-columns:1fr}.rm-kol{min-height:0}}
 .mf-info{position:relative}
 .mf-knop{width:22px;height:22px;border:0;border-radius:50%;background:none;cursor:pointer;color:var(--ui-zacht);display:grid;place-items:center;padding:0}
 .mf-knop:hover,.mf-knop[aria-expanded=true]{background:#f0f1f7;color:var(--ui-inkt)}
@@ -695,6 +706,7 @@ button.bol:hover:not(.aan){background:var(--cl)}
         <button type="button" role="menuitem" data-menu="opruimen"></button>
         <div class="menu-lijn" role="separator"></div>
         <button type="button" role="menuitem" data-menu="hulp"></button>
+        <button type="button" role="menuitem" data-menu="roadmap"></button>
       </div>
     </div>
     <input type="file" id="bestandKiezer" accept=".json,application/json" hidden>
@@ -737,7 +749,7 @@ button.bol:hover:not(.aan){background:var(--cl)}
       <button type="button" class="mf-knop" id="infoKnop" aria-expanded="false" aria-controls="infoTekst" title="Vragen of opmerkingen?" aria-label="Vragen of opmerkingen?"></button>
       <div class="mf-pop" id="infoTekst" role="status" hidden>Vragen of opmerkingen? Stuur het door naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a></div>
     </div>
-    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.35</button>
+    <button type="button" class="mf-versie" id="versieKnop" title="Wat is er nieuw? Bekijk het wijzigingslogboek">versie 1.36</button>
     </div>
   <div class="zoom-balk" id="zoomBalk" hidden role="group" aria-label="Inzoomen op het rapport">
     <button type="button" id="zoomMin" aria-label="Uitzoomen" title="Uitzoomen">−</button>
@@ -886,6 +898,15 @@ button.bol:hover:not(.aan){background:var(--cl)}
   </div>
 </dialog>
 
+<dialog id="dlgRoadmap" aria-labelledby="rmTitel">
+  <form class="dlg" method="dialog">
+    <h2 id="rmTitel">Roadmap</h2>
+    <p class="rm-intro">Waar wordt aan gewerkt? Hier zie je wat er gepland staat, wat in ontwikkeling is en wat klaar is.</p>
+    <div class="rm-kolommen" id="rmKolommen"></div>
+    <div class="knoppenrij"><button class="knop hoofd" value="ok">Sluiten</button></div>
+  </form>
+</dialog>
+
 <dialog id="dlgPdf">
   <div class="dlg">
     <h2>Exporteer als PDF</h2>
@@ -899,9 +920,10 @@ button.bol:hover:not(.aan){background:var(--cl)}
 <dialog id="dlgLogboek">
   <form class="dlg" method="dialog">
     <h2>Wat is er nieuw?</h2>
-    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.35.</p>
+    <p style="margin:0;font-size:13px;color:var(--ui-zacht)">Alle wijzigingen per versie, de nieuwste bovenaan. Je werkt nu met versie 1.36.</p>
     <div class="log-inhoud">
-      <details open><summary><b>Versie 1.35</b> <span>12 november 2026</span></summary><h4>Aangepast</h4><ul><li><b>Taal (groep 4 t/m 8) heeft nog maar twee onderdelen:</b> <i>Taalverkenning</i> en <i>Woordenschat</i>. Luisteren &amp; spreken en Schrijven &amp; stellen staan er niet meer op. (De zin bij Taalverkenning heb ik zelf geschreven: <i>Ik ontdek hoe taal werkt en ga er slim mee om.</i>)</li><li><b>Spelling:</b> groep 4 en 5 hebben alleen <b>Woorden</b>. Groep 6 t/m 8 hebben <b>Woorden</b> en <b>Werkwoorden</b> (eerder <i>Werkwoordspelling</i>). Leestekens en Zinnen staan er niet meer op.</li><li><b>Technisch lezen heet nu Lezen</b> (groep 3 t/m 8). Het onderdeel eronder, eerder ook Technisch lezen (groep 4 t/m 8), heet nu <b>Blink lezen</b>. De rubric heet nu <i>Rubric Blink lezen</i>. Bij groep 3 staan de onderdelen Correct lezen en Tempo lezen er nog onder.</li><li>Ook in de lijst met onderdelen die je bij <i>Onderdelen kiezen</i> kunt toevoegen zijn deze namen aangepast, en <i>Taalverkenning</i> staat erbij.</li></ul><h4>Handleiding en uitleg voor ouders</h4><ul><li>De handleiding en de uitleg voor ouders (groep 3 t/m 8) spreken nu over het vak Lezen en het onderdeel Blink lezen.</li></ul><h4>Let op</h4><ul><li>Gegevens die bij onderdelen zijn ingevuld die nu van het rapport zijn (zoals Luisteren &amp; spreken of Leestekens) blijven bewaard, maar worden niet meer getoond.</li></ul></details>
+      <details open><summary><b>Versie 1.36</b> <span>12 november 2026</span></summary><h4>Nieuw</h4><ul><li><b>Roadmap</b> in het hoofdmenu (de drie puntjes, onder <i>Handleiding</i>). Een venster met drie kolommen: <b>Gepland</b>, <b>In ontwikkeling</b> en <b>Voltooid</b>. Zo is te zien waar aan gewerkt wordt. Bij <i>Gepland</i> staan nu: <i>Subcategorieën rekenen groepen 5 &amp; 6</i> en <i>Subcategorieën rekenen groepen 7 &amp; 8</i>.</li></ul><h4>Aangepast (groep 5 t/m 8)</h4><ul><li><b>Rekenen heeft nu één onderdeel, dat ook Rekenen heet.</b> De vier subcategorieën (Getallen &amp; bewerkingen, Breuken, procenten &amp; verhoudingen, Meten &amp; meetkunde, Verbanden &amp; grafieken) staan er voorlopig niet meer op, omdat die later weer terugkomen (zie de Roadmap). Eerder ingevulde gegevens bij die onderdelen blijven bewaard, maar worden niet getoond. Een eigen pad voor Rekenen kan nog steeds.</li></ul></details>
+      <details><summary><b>Versie 1.35</b> <span>12 november 2026</span></summary><h4>Aangepast</h4><ul><li><b>Taal (groep 4 t/m 8) heeft nog maar twee onderdelen:</b> <i>Taalverkenning</i> en <i>Woordenschat</i>. Luisteren &amp; spreken en Schrijven &amp; stellen staan er niet meer op. (De zin bij Taalverkenning heb ik zelf geschreven: <i>Ik ontdek hoe taal werkt en ga er slim mee om.</i>)</li><li><b>Spelling:</b> groep 4 en 5 hebben alleen <b>Woorden</b>. Groep 6 t/m 8 hebben <b>Woorden</b> en <b>Werkwoorden</b> (eerder <i>Werkwoordspelling</i>). Leestekens en Zinnen staan er niet meer op.</li><li><b>Technisch lezen heet nu Lezen</b> (groep 3 t/m 8). Het onderdeel eronder, eerder ook Technisch lezen (groep 4 t/m 8), heet nu <b>Blink lezen</b>. De rubric heet nu <i>Rubric Blink lezen</i>. Bij groep 3 staan de onderdelen Correct lezen en Tempo lezen er nog onder.</li><li>Ook in de lijst met onderdelen die je bij <i>Onderdelen kiezen</i> kunt toevoegen zijn deze namen aangepast, en <i>Taalverkenning</i> staat erbij.</li></ul><h4>Handleiding en uitleg voor ouders</h4><ul><li>De handleiding en de uitleg voor ouders (groep 3 t/m 8) spreken nu over het vak Lezen en het onderdeel Blink lezen.</li></ul><h4>Let op</h4><ul><li>Gegevens die bij onderdelen zijn ingevuld die nu van het rapport zijn (zoals Luisteren &amp; spreken of Leestekens) blijven bewaard, maar worden niet meer getoond.</li></ul></details>
       <details><summary><b>Versie 1.34</b> <span>12 november 2026</span></summary><h4>Aangepast</h4><ul><li><b>De naam van de methode staat nu letterlijk als <i>VierKeerWijzer</b></i> (één woord, zoals de methode heet) bij Wereldoriëntatie, in groep 3 t/m 8. Eerder stond er <i>Vier keer wijzer</i>. Eerder ingevulde gegevens blijven bewaard.</li></ul></details>
       <details><summary><b>Versie 1.33</b> <span>12 november 2026</span></summary><h4>Aangepast (groep 5 t/m 8)</h4><ul><li><b>Bij Taal staat <i>Lezen &amp; tekstbegrip</i> niet meer.</b> Lezen valt onder Technisch lezen, en dat heeft al een eigen plek op het rapport. Taal heeft nu: <i>Luisteren &amp; spreken</i>, <i>Schrijven &amp; stellen</i> en <i>Taal &amp; woordenschat</i>. Het onderdeel staat ook niet meer in de lijst met onderdelen die je bij <i>Onderdelen kiezen</i> kunt toevoegen.</li><li><b>Bij Wereldoriëntatie heet het onderdeel nu <i>Vier keer wijzer</b></i> (eerder stond er twee keer Wereldoriëntatie onder elkaar). Dit is nu hetzelfde als bij groep 3 en 4. Eerder ingevulde gegevens blijven bewaard.</li></ul></details>
       <details><summary><b>Versie 1.32</b> <span>5 november 2026</span></summary><h4>Nieuw</h4><ul><li><b>Groep 1 en groep 2 hebben nu elk een eigen rapport.</b> In de groepkeuze staan <i>1</i> en <i>2</i> los van elkaar (eerder <i>1 / 2</i>). De gebieden en onderdelen blijven gelijk (Rekenen, Taal, Motoriek, Spel), maar de ik-zinnen zijn per groep verschillend, volgens de input van de leerkrachten. Bijvoorbeeld bij Getallen: groep 1 <i>t/m 10</i>, groep 2 <i>t/m 20</i>. Beide groepen werken met de driepuntsschaal en zonder eigen pad.</li><li><b>Gegevens blijven bewaard.</b> Had je al een klas ingevuld in het gezamenlijke rapport voor groep 1/2? Die wordt eenmalig overgezet naar de eerste kleutergroep die je opent (meestal groep 1), en een kopie blijft veilig in de browser staan. Zijn er kinderen van de andere groep bij, verwijder ze dan via de drie puntjes achter hun naam. Een eerder bewaard klasbestand van groep 1/2 kan gewoon geopend worden in groep 1 of groep 2.</li><li><b>Uitleg voor ouders</b> heeft nu een eigen versie voor groep 1, voor groep 2 en voor groep 3 t/m 8 (zie Visuals).</li></ul><h4>Handleiding</h4><ul><li>Teksten over groep 1/2 zijn aangepast naar groep 1 en groep 2.</li></ul></details>
@@ -975,7 +997,7 @@ button.bol:hover:not(.aan){background:var(--cl)}
       <li><b>Printen of PDF.</b> Open het menu rechtsboven (de drie puntjes) en kies <i>Leerling printen</i>, <i>Klas printen</i> of <i>Exporteer PDF</i>. Bij <i>Exporteer PDF</i> kies je in het printvenster <i>Opslaan als PDF</i>, en je kunt ook de hele klas in één PDF zetten. Zie je geen kleuren? Zet dan bij <i>Meer instellingen</i> het vinkje <i>Achtergrondafbeeldingen</i> aan.</li>
     </ol>
     <p class="tip">Privacy: de gegevens van de kinderen blijven op jouw computer. Er wordt niets via internet verstuurd.</p>
-    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.35</p>
+    <p class="versie" style="font-size:12.5px;color:var(--ui-zacht);margin:10px 0 0">Rapport De Schatgraver · versie 1.36</p>
     <div class="knoppenrij"><button class="knop hoofd" value="ok">Begrepen</button></div>
   </form>
 </dialog>
@@ -1012,10 +1034,9 @@ const GROEP_8 = {
   vakken: [
     { id: 'rekenen', naam: 'Rekenen', eigenPad: true, icoon: 'rekenmachine', kleur: '#e795c4', donker: '#d1418f', licht: '#fbe1ef', inkt: '#4b2340',
       onderdelen: [
-        { id: 'getallen',   naam: 'Getallen & bewerkingen',            zin: 'Ik reken met grote getallen en kommagetallen.', icoon: 'getallen' },
-        { id: 'breuken',    naam: 'Breuken, procenten & verhoudingen', zin: 'Ik werk met breuken, procenten en verhoudingen.', icoon: 'taart' },
-        { id: 'meten',      naam: 'Meten & meetkunde',                 zin: 'Ik meet, reken met maten en werk met vormen.', icoon: 'liniaal' },
-        { id: 'verbanden',  naam: 'Verbanden & grafieken',             zin: 'Ik lees en maak tabellen en grafieken.', icoon: 'grafiek' }
+        /* Voorlopig één onderdeel; de subcategorieën (Getallen & bewerkingen, Breuken, Meten & meetkunde, Verbanden & grafieken)
+           staan op de roadmap en staan nog in de lijst bij Onderdelen kiezen. */
+        { id: 'rekenen',    naam: 'Rekenen',                           zin: 'Ik reken goed en vlot met getallen en sommen.', icoon: 'getallen' }
       ] },
     { id: 'spelling', naam: 'Spelling', eigenPad: true, icoon: 'potlood', kleur: '#94c6ec', donker: '#3d8bcc', licht: '#ddedfa', inkt: '#173a5a',
       onderdelen: [
@@ -1511,6 +1532,7 @@ const UI = {
   plus: I(`<path d="M12 5v14M5 12h14"/>`),
   lijst: I(`<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1" fill="currentColor"/><circle cx="4.5" cy="12" r="1" fill="currentColor"/><circle cx="4.5" cy="18" r="1" fill="currentColor"/>`),
   pijlNeer: I(`<path d="M6 9l6 6 6-6"/>`),
+  roadmap: I(`<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/>`),
   afbeelding: I(`<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.7"/><path d="M21 15.5l-4.8-4.8L7 20"/>`),
   info: I(`<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><circle cx="12" cy="7.6" r=".9" fill="currentColor"/>`),
   hulp: I(`<circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.7"/><circle cx="12" cy="17" r=".6" fill="currentColor"/>`),
@@ -2561,7 +2583,8 @@ const MENU = {
   pdf:             [UI.pdf, 'Exporteer PDF'],
   visuals:         [UI.afbeelding, 'Visuals'],
   opruimen:        [UI.prullenbak, 'Opruimen'],
-  hulp:            [UI.hulp, 'Handleiding']
+  hulp:            [UI.hulp, 'Handleiding'],
+  roadmap:         [UI.roadmap, 'Roadmap']
 };
 /* ============ Handleiding ============ */
 function bouwHandleiding(){
@@ -2717,7 +2740,7 @@ Tekst:
       ${nr(3, `<button type="button" tabindex="-1">${UI.pdf}Exporteer PDF</button>`, ' hb-blok')}
       ${nr(4, `<button type="button" tabindex="-1">${UI.afbeelding}Visuals</button>`, ' hb-blok')}
       ${nr(5, `<button type="button" tabindex="-1">${UI.prullenbak}Opruimen</button>`, ' hb-blok')}
-      <div class="menu-lijn"></div><button type="button" tabindex="-1">${UI.hulp}Handleiding</button></div></div>
+      <div class="menu-lijn"></div><button type="button" tabindex="-1">${UI.hulp}Handleiding</button><button type="button" tabindex="-1">${UI.roadmap}Roadmap</button></div></div>
       <figcaption>Het hoofdmenu (de drie puntjes rechtsboven).</figcaption></figure>`;
 
   const figPdf = `<figure class="hb-fig" aria-hidden="true"><div class="hb-pdfvenster"><b class="t">Exporteer als PDF</b>
@@ -3157,7 +3180,7 @@ Tekst:
       </table>` },
 
     { id: 'meer', titel: 'Meer hulp', html: `
-      <p>Kom je er met deze handleiding niet uit, of mis je iets? Stuur een berichtje naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a>. Via het info-icoontje ${ico('info', ' rond')} onderin links vind je dit adres ook.</p>
+      <p>Kom je er met deze handleiding niet uit, of mis je iets? Stuur een berichtje naar <a href="mailto:koen.kerkvliet@movare.nl">koen.kerkvliet@movare.nl</a>. Wat er nog gepland staat, zie je bij <b>Roadmap</b> in het hoofdmenu. Via het info-icoontje ${ico('info', ' rond')} onderin links vind je dit adres ook.</p>
       <p>Wil je een kort overzicht van alle onderdelen op één plek? Dat staat in de snelle uitleg.</p>
       <p><button type="button" class="knop" id="hbSnelleUitleg">Snelle uitleg bekijken</button></p>` }
   ];
@@ -3231,6 +3254,22 @@ bouwHandleiding();
 $('#knopHandleiding').innerHTML = UI.hulp;
 $('#knopHandleiding').addEventListener('click', () => { menuOpen(false); groepLijstOpen(false); window.openHandleiding(); });
 
+/* ============ Roadmap ============
+   Eenvoudig bij te werken: zet een regel in de juiste lijst (gepland, ontwikkeling of voltooid). */
+const ROADMAP = {
+  gepland: [
+    'Subcategorieën rekenen groepen 5 & 6',
+    'Subcategorieën rekenen groepen 7 & 8'
+  ],
+  ontwikkeling: [],
+  voltooid: []
+};
+function openRoadmap(){
+  const kolommen = [['gepland', 'Gepland', '#6c8cd6'], ['ontwikkeling', 'In ontwikkeling', '#f27a24'], ['voltooid', 'Voltooid', '#5f9e2f']];
+  $('#rmKolommen').innerHTML = kolommen.map(([sl, naam, kleur]) => `<section class="rm-kol"><h3><i style="background:${kleur}"></i>${naam}<span>${ROADMAP[sl].length}</span></h3>`
+    + (ROADMAP[sl].length ? ROADMAP[sl].map((t) => `<div class="rm-kaart">${esc(t)}</div>`).join('') : '<p class="rm-leeg">Nog niets</p>') + '</section>').join('');
+  $('#dlgRoadmap').showModal();
+}
 $('#knopMenu').innerHTML = UI.puntjes;
 document.querySelectorAll('#menuLijst [data-menu]').forEach((b) => { const [ic, tekst] = MENU[b.dataset.menu]; b.innerHTML = ic + tekst; });
 function menuOpen(open){
@@ -3269,6 +3308,7 @@ $('#menuLijst').addEventListener('click', (e) => {
     case 'visuals': openVisuals(); break;
     case 'opruimen': openOpruimen(); break;
     case 'hulp': window.openHandleiding(); break;
+    case 'roadmap': openRoadmap(); break;
   }
 });
 
