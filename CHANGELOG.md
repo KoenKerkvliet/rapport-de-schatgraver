@@ -5,6 +5,14 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.34 – 12 november 2026
+Bestand: `rapport-de-schatgraver-v1.34.html` (met de map `visuals` ernaast)
+
+**Aangepast**
+- **De naam van de methode staat nu letterlijk als *VierKeerWijzer*** (één woord, zoals de methode heet) bij Wereldoriëntatie, in groep 3 t/m 8. Eerder stond er *Vier keer wijzer*. Eerder ingevulde gegevens blijven bewaard.
+
+---
+
 ## Versie 1.33 – 12 november 2026
 Bestand: `rapport-de-schatgraver-v1.33.html` (met de map `visuals` ernaast)
 
