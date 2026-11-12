@@ -5,6 +5,23 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.35 – 12 november 2026
+Bestand: `rapport-de-schatgraver-v1.35.html` (met de map `visuals` ernaast)
+
+**Aangepast**
+- **Taal (groep 4 t/m 8) heeft nog maar twee onderdelen:** *Taalverkenning* en *Woordenschat*. Luisteren & spreken en Schrijven & stellen staan er niet meer op. (De zin bij Taalverkenning heb ik zelf geschreven: *Ik ontdek hoe taal werkt en ga er slim mee om.*)
+- **Spelling:** groep 4 en 5 hebben alleen **Woorden**. Groep 6 t/m 8 hebben **Woorden** en **Werkwoorden** (eerder *Werkwoordspelling*). Leestekens en Zinnen staan er niet meer op.
+- **Technisch lezen heet nu Lezen** (groep 3 t/m 8). Het onderdeel eronder, eerder ook Technisch lezen (groep 4 t/m 8), heet nu **Blink lezen**. De rubric heet nu *Rubric Blink lezen*. Bij groep 3 staan de onderdelen Correct lezen en Tempo lezen er nog onder.
+- Ook in de lijst met onderdelen die je bij *Onderdelen kiezen* kunt toevoegen zijn deze namen aangepast, en *Taalverkenning* staat erbij.
+
+**Handleiding en uitleg voor ouders**
+- De handleiding en de uitleg voor ouders (groep 3 t/m 8) spreken nu over het vak Lezen en het onderdeel Blink lezen.
+
+**Let op**
+- Gegevens die bij onderdelen zijn ingevuld die nu van het rapport zijn (zoals Luisteren & spreken of Leestekens) blijven bewaard, maar worden niet meer getoond.
+
+---
+
 ## Versie 1.34 – 12 november 2026
 Bestand: `rapport-de-schatgraver-v1.34.html` (met de map `visuals` ernaast)
 
