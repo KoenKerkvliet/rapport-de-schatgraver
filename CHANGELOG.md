@@ -5,6 +5,15 @@ De nieuwste versie staat altijd in de hoofdmap. Oudere versies staan in de map `
 
 ---
 
+## Versie 1.33 – 12 november 2026
+Bestand: `rapport-de-schatgraver-v1.33.html` (met de map `visuals` ernaast)
+
+**Aangepast (groep 5 t/m 8)**
+- **Bij Taal staat *Lezen & tekstbegrip* niet meer.** Lezen valt onder Technisch lezen, en dat heeft al een eigen plek op het rapport. Taal heeft nu: *Luisteren & spreken*, *Schrijven & stellen* en *Taal & woordenschat*. Het onderdeel staat ook niet meer in de lijst met onderdelen die je bij *Onderdelen kiezen* kunt toevoegen.
+- **Bij Wereldoriëntatie heet het onderdeel nu *Vier keer wijzer*** (eerder stond er twee keer Wereldoriëntatie onder elkaar). Dit is nu hetzelfde als bij groep 3 en 4. Eerder ingevulde gegevens blijven bewaard.
+
+---
+
 ## Versie 1.32 – 5 november 2026
 Bestand: `rapport-de-schatgraver-v1.32.html` (met de map `visuals` ernaast)
 
